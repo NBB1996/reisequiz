@@ -1,0 +1,181 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.btn-custom {
+    background-color: #00695c;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #004d40;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 30px;
+}
+
+footer {
+    font-size: 0.8rem;
+    margin-top: 50px;
+    color: #888;
+}
+
+/* Light box für Einstellungen */
+.box-light {
+    background-color: #e0f7f7;
+    box-shadow: 0 0 10px rgba(0, 105, 92, 0.1);
+}
+
+/* Form-Styles */
+.form-select, .form-check-input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.btn-custom:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Formularstruktur */
+form label {
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Für Radiobuttons mit Beschreibung */
+.form-check-label small {
+    font-weight: normal;
+    color: #555;
+}
+
+/* Quizbild verpixelt (je nach Level soll Bild ersetzt werden) */
+.quiz-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Antwortoptionen */
+.answer-option {
+    background-color: #444;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #444;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.answer-option:hover {
+    background-color: #333;
+}
+
+.answer-option.selected-answer {
+    background-color: #00695c;
+    border-color: #00695c;
+    color: #fff;
+}
+
+/* Hinweisbox */
+.box-light {
+    background-color: #e0f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Quizbild verpixelt (je nach Level soll Bild ersetzt werden) */
+.quiz-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Antwortoptionen */
+.answer-option {
+    background-color: #444;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #444;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.answer-option:hover {
+    background-color: #333;
+}
+
+.answer-option.selected-answer {
+    background-color: #00695c;
+    border-color: #00695c;
+    color: #fff;
+}
+
+/* Hinweisbox */
+.box-light {
+    background-color: #e0f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sekundäre Box (z. B. Beschreibung) */
+.box-sub {
+    background-color: #f5fdfd;
+    border-left: 5px solid #00695c;
+    border-radius: 8px;
+}
+
+/* Attraktionen / Karten */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+

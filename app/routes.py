@@ -1,5 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, session
-from .quiz_engine import generate_quiz_question
+from flask import Blueprint, render_template
 
 main = Blueprint('main', __name__)
 
@@ -9,27 +8,12 @@ def index():
 
 @main.route('/settings', methods=['GET', 'POST'])
 def settings():
-    if request.method == 'POST':
-        session['category'] = request.form['category']
-        session['continent'] = request.form['continent']
-        session['difficulty'] = request.form['difficulty']
-        return redirect(url_for('main.quiz'))
     return render_template('settings.html')
 
-@main.route('/quiz')
+@main.route('/quiz', methods=['GET', 'POST'])
 def quiz():
-    question_data = generate_quiz_question(
-        session['category'],
-        session['continent'],
-        session['difficulty']
-    )
-    session['question'] = question_data
-    return render_template('quiz.html', data=question_data)
+    return render_template('quiz.html')
 
-@main.route('/result', methods=['POST'])
+@main.route('/result', methods=['GET', 'POST'])
 def result():
-    selected = request.form.get('selected')
-    correct = session['question']['correct']
-    is_correct = (selected == correct)
-    return render_template('result.html', correct=correct, is_correct=is_correct,
-                           details=session['question']['details'])
+    return render_template('result.html')
