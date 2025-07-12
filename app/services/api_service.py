@@ -22,3 +22,8 @@ class APIService:
                     return item["original"]["source"]
         return "/static/placeholder.jpg"
 
+    @staticmethod
+    def holeWikipediaLink(reiseziel):
+        from urllib.parse import quote
+        name_encoded = quote(reiseziel.name)
+        return f"https://de.wikipedia.org/wiki/{name_encoded}"

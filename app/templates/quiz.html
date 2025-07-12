@@ -23,28 +23,27 @@
     </header>
 
     <!-- Kategorie-Übersicht -->
-    <p class="text-muted">Städtereisen | Europa | Backpacker</p>
+    <p class="text-muted">
+        {{ session.quiz_config.kategorie }} | {{ session.quiz_config.kontinent }} | {{ session.quiz_config.level }}
+    </p>
 
-    <!-- Bild (ggf. verpixelt) -->
-    <img src="{{ url_for('static', filename='paris_blurred.jpg') }}" alt="Hinweisbild" class="quiz-image">
+    <!-- Hinweisbild -->
+    <img src="{{ frage.bild_url }}" alt="Hinweisbild" class="quiz-image img-fluid rounded mb-3">
 
     <!-- Hinweistext -->
     <div class="box-light mt-3 text-start">
-        <h5><strong>Welche Stadt wird durch diesen Text beschrieben</strong></h5>
-        <p>
-            Mit der städtischen Siedlungszone (französisch: Aire urbaine) hat die Metropolregion 12,5 Millionen Einwohner 
-            und ist damit eine der größten Stadtregionen Europas. Als <em>Lutetia</em> auf einer Seineinsel vor mehr als 
-            2000 Jahren gegründet, ist die Stadt zu einer der lebendigsten Metropolen Europas und der Welt geworden. 
-            Die Stadt lockt mit Mode, Kunst und Kultur.
-        </p>
+        <h5><strong>Welcher Ort wird hier beschrieben?</strong></h5>
+        <p>{{ frage.hinweistext }}</p>
     </div>
 
     <!-- Antwortmöglichkeiten -->
     <form id="quizForm" method="POST" action="{{ url_for('main.result') }}">
         <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
-            {% for option in ["Paris", "Madrid", "London", "Berlin"] %}
+            {% for option in frage.antwortoptionen %}
             <div class="col">
-                <button type="button" class="answer-option btn" data-value="{{ option }}">{{ option }}</button>
+                <button type="button" class="answer-option btn btn-outline-primary w-100" data-value="{{ option.name }}">
+                    {{ option.name }}
+                </button>
             </div>
             {% endfor %}
         </div>
@@ -58,10 +57,11 @@
         <input type="hidden" name="selected_answer" id="selected_answer">
 
         <!-- Prüfen-Button -->
-        <button type="submit" class="btn-custom mt-4" id="submitBtn" disabled>Antwort überprüfen</button>
+        <button type="submit" class="btn btn-success mt-4" id="submitBtn" disabled>Antwort überprüfen</button>
     </form>
 </div>
 
+<!-- Antwortauswahl JavaScript -->
 <script>
     const buttons = document.querySelectorAll('.answer-option');
     const selectedAnswer = document.getElementById('selected_answer');
@@ -70,8 +70,8 @@
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('selected-answer'));
-            button.classList.add('selected-answer');
+            buttons.forEach(b => b.classList.remove('selected-answer', 'btn-primary'));
+            button.classList.add('selected-answer', 'btn-primary');
             selectedAnswer.value = button.dataset.value;
             submitBtn.disabled = false;
             errorMsg.style.display = 'none';
@@ -88,3 +88,4 @@
 
 </body>
 </html>
+

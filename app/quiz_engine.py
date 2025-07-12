@@ -6,17 +6,17 @@ from app.services.api_service import APIService
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
+from app.services.booking_link_generator import BookingDeeplinkGenerator
 import random
 
 def lade_reiseziele():
-    with open("app/static/data/reiseziele.json", encoding="utf-8") as f:
+    with open("app/static/data/reiseziel.json", encoding="utf-8") as f:
         daten = json.load(f)
 
     reiseziele = []
     for eintrag in daten:
         rz = Reiseziel(
             name=eintrag["name"],
-            land="Unbekannt",  # ggf. ergänzen in JSON
             kontinent=Kontinent(eintrag["kontinent"]),
             kategorie=Kategorie(eintrag["kategorie"])
         )
@@ -52,3 +52,35 @@ def generiere_quizfrage(kategorie, kontinent, level):
     )
 
     return frage
+
+def verarbeite_antwort(frage: Quizfrage, ausgewaehlte_antwort: str):
+    """
+    Setzt die gegebene Antwort in der Frage und prüft, ob sie richtig ist.
+    :param frage: das aktuelle Quizfrage-Objekt
+    :param ausgewaehlte_antwort: der Name (string) des Reiseziels, das der Nutzer gewählt hat
+    :return: True wenn korrekt, sonst False
+    """
+    for option in frage.antwortoptionen:
+        if option.name == ausgewaehlte_antwort:
+            frage.benutzerantwort = option
+            return frage.ist_richtig()
+    return False  # falls keine gültige Antwort ausgewählt wurde
+
+from app.services.booking_link_generator import BookingDeeplinkGenerator
+from app.models.reiseziel import ReisezielDetails
+
+def erzeuge_reiseziel_details(reiseziel):
+    beschreibung = APIService.holeHinweistext(reiseziel)
+    bild_url = APIService.holeBildURL(reiseziel)
+    booking_url = BookingDeeplinkGenerator.bereitstellungDeeplink(reiseziel)
+    wikipedia_url = APIService.holeWikipediaLink(reiseziel)
+
+    details = ReisezielDetails(
+        name=reiseziel.name,               
+        beschreibung=beschreibung,
+        image_url=bild_url,
+        booking_url=booking_url,
+        wikipedia_url=wikipedia_url         
+    )
+
+    return details

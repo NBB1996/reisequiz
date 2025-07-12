@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, session
-from app.quiz_engine import generiere_quizfrage
+from app.quiz_engine import generiere_quizfrage, verarbeite_antwort, erzeuge_reiseziel_details
 from app.models.quiz import Quiz
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
@@ -13,17 +13,12 @@ def index():
 
 @main.route('/settings', methods=['GET', 'POST'])
 def settings():
-    return render_template('settings.html')
+    kategorien = Kategorie.get_all()
+    kontinente = Kontinent.get_all()
+    level_stufen = Level.get_all()
+    return render_template('settings.html', kategorien=kategorien, kontinente=kontinente, level_stufen=level_stufen)
 
-@main.route('/quiz_view', methods=['GET', 'POST'])
-def quiz_view():
-    return render_template('quiz_view.html')
-
-@main.route('/result', methods=['GET', 'POST'])
-def result():
-    return render_template('result.html')
-
-@main.route("/quiz_view", methods=["POST"])
+@main.route("/quiz", methods=["POST"])
 def quiz():
     # 1. Formulareingaben des Nutzers lesen
     kategorie_name = request.form.get("kategorie")
@@ -56,3 +51,41 @@ def quiz():
 
     # 7. Template anzeigen
     return render_template("quiz.html", frage=frage)
+
+@main.route("/result", methods=["POST"])
+def result():
+    # 1. Antwort des Nutzers auslesen
+    ausgewaehlt = request.form.get("selected_answer")
+
+    # 2. Quizkonfiguration aus Session lesen
+    quiz_config = session.get("quiz_config")
+    if not quiz_config:
+        return "Fehler: Keine gültige Session vorhanden.", 400
+
+    # 3. Einstellungen rekonstruieren
+    kategorie = Kategorie.get_by_name(quiz_config["kategorie"])
+    kontinent = Kontinent.get_by_name(quiz_config["kontinent"])
+    level = Level.get_by_name(quiz_config["level"])
+
+    # 4. Die gleiche Frage erneut generieren (wie im Quiz)
+    frage = generiere_quizfrage(kategorie, kontinent, level)
+
+    # 5. Antwort prüfen
+    ausgewaehlte_antwort = request.form.get("selected_answer")
+    if not ausgewaehlte_antwort:
+        return "Fehler: Es wurde keine Antwort übermittelt.", 400   
+    korrekt = verarbeite_antwort(frage, ausgewaehlte_antwort)
+
+    # 6. Reiseziel-Details erzeugen
+    reiseziel_details = erzeuge_reiseziel_details(frage.richtige_antwort)
+
+    # 7. Template anzeigen mit allen nötigen Daten
+    return render_template(
+        "result.html",
+        korrekt=korrekt,
+        reiseziel_name=frage.richtige_antwort.name,
+        reiseziel_beschreibung=reiseziel_details.beschreibung,
+        booking_link=reiseziel_details.booking_url,
+        wikipedia_link=reiseziel_details.wikipedia_url,
+        bild_url=reiseziel_details.image_url
+    )

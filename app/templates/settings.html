@@ -20,27 +20,23 @@
         <h2>Quiz Einstellungen <i class="bi bi-geo-alt-fill"></i></h2>
         <p>Passe das Quiz nach deinen Wünschen an:</p>
 
-        <form id="quizSettingsForm" method="POST" action="{{ url_for('main.quiz_view') }}">
+        <form id="quizSettingsForm" method="POST" action="{{ url_for('main.quiz') }}">
             <div class="row justify-content-center">
                 <!-- Kategorie / Kontinent -->
                 <div class="col-md-5 p-3 rounded box-light">
                     <h5><i class="bi bi-globe2"></i> Quiz Kategorie</h5>
                     <label for="kategorie">Wähle die passende Kategorie aus:</label>
                     <select class="form-select mb-3" name="kategorie" id="kategorie" required>
-                        <option value="">Kategorie wählen</option>
-                        <option value="Stadt">Städte</option>
-                        <option value="Region">Regionen</option>
+                        {% for kat in kategorien %}
+                         <option value="{{ kat.name }}">{{ kat.name }}</option>
+                        {% endfor %}
                     </select>
 
                     <label for="kontinent">Wähle den Kontinent aus:</label>
                     <select class="form-select" name="kontinent" id="kontinent" required>
-                        <option value="">Kontinent wählen</option>
-                        <option value="Europa">Europa</option>
-                        <option value="Asien">Asien</option>
-                        <option value="Afrika">Afrika</option>
-                        <option value="Nordamerika">Nordamerika</option>
-                        <option value="Südamerika">Südamerika</option>
-                        <option value="Ozeanien">Ozeanien</option>
+                        {% for kont in kontinente %}
+                        <option value="{{ kont.name }}">{{ kont.name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
 
@@ -48,22 +44,23 @@
                 <div class="col-md-5 p-3 rounded box-light">
                     <h5><i class="bi bi-triangle-fill"></i> Schwierigkeit-Level</h5>
                     <div class="form-check mb-2 text-start">
-                        <input class="form-check-input" type="radio" name="level" id="sofasurfer" value="Leicht">
-                        <label class="form-check-label" for="sofasurfer">
-                            <strong>Sofasurfer</strong><br><small>Einfach – Für Reise-Anfänger</small>
-                        </label>
-                    </div>
-                    <div class="form-check mb-2 text-start">
-                        <input class="form-check-input" type="radio" name="level" id="backpacker" value="Mittel">
-                        <label class="form-check-label" for="backpacker">
-                            <strong>Backpacker</strong><br><small>Mittel – Für Reise-Erfahrene</small>
-                        </label>
-                    </div>
-                    <div class="form-check mb-2 text-start">
-                        <input class="form-check-input" type="radio" name="level" id="globetrotter" value="Schwer">
-                        <label class="form-check-label" for="globetrotter">
-                            <strong>Globetrotter</strong><br><small>Schwer – Für Reise-Experten</small>
-                        </label>
+                        {% for level in level_stufen %}
+                        <div class="form-check mb-2 text-start">
+                            <input class="form-check-input" type="radio" name="level" id="level{{ loop.index }}" value="{{ level.name }}">
+                            <label class="form-check-label" for="level{{ loop.index }}">
+                                <strong>{{ level.name }}</strong><br>
+                                {% if level.name == 'Leicht' %}
+                                <small>Einfach – Für Reise-Anfänger</small>
+                                {% elif level.name == 'Mittel' %}
+                                <small>Mittel – Für Reise-Erfahrene</small>
+                                {% elif level.name == 'Schwer' %}
+                                <small>Schwer – Für Reise-Experten</small>
+                                {% else %}
+                                <small>Individuelles Level</small>
+                                {% endif %}
+                            </label>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
