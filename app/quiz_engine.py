@@ -53,22 +53,6 @@ def generiere_quizfrage(kategorie, kontinent, level):
 
     return frage
 
-def verarbeite_antwort(frage: Quizfrage, ausgewaehlte_antwort: str):
-    """
-    Setzt die gegebene Antwort in der Frage und prüft, ob sie richtig ist.
-    :param frage: das aktuelle Quizfrage-Objekt
-    :param ausgewaehlte_antwort: der Name (string) des Reiseziels, das der Nutzer gewählt hat
-    :return: True wenn korrekt, sonst False
-    """
-    for option in frage.antwortoptionen:
-        if option.name == ausgewaehlte_antwort:
-            frage.benutzerantwort = option
-            return frage.ist_richtig()
-    return False  # falls keine gültige Antwort ausgewählt wurde
-
-from app.services.booking_link_generator import BookingDeeplinkGenerator
-from app.models.reiseziel import ReisezielDetails
-
 def erzeuge_reiseziel_details(reiseziel):
     beschreibung = APIService.holeHinweistext(reiseziel)
     bild_url = APIService.holeBildURL(reiseziel)
