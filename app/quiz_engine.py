@@ -1,28 +1,54 @@
+import json
+from app.models.quiz import Quiz
+from app.models.quizfrage import Quizfrage
+from app.models.reiseziel import Reiseziel, ReisezielDetails
+from app.services.api_service import APIService
+from app.models.kategorie import Kategorie
+from app.models.kontinent import Kontinent
+from app.models.level import Level
 import random
-from wiki_api import get_description, get_image
 
-DESTINATIONS = {
-    "Paris": {"continent": "Europa", "category": "Stadt"},
-    "Kyoto": {"continent": "Asien", "category": "Stadt"},
-    # ...
-}
+def lade_reiseziele():
+    with open("app/static/data/reiseziele.json", encoding="utf-8") as f:
+        daten = json.load(f)
 
-def generate_quiz_question(category, continent, difficulty):
-    candidates = [d for d in DESTINATIONS if DESTINATIONS[d]['continent'] == continent and DESTINATIONS[d]['category'] == category]
-    
-    num_options = {"Leicht": 2, "Mittel": 4, "Schwer": 10}[difficulty]
-    correct = random.choice(candidates)
-    options = random.sample([d for d in candidates if d != correct], num_options - 1)
-    options.append(correct)
-    random.shuffle(options)
+    reiseziele = []
+    for eintrag in daten:
+        rz = Reiseziel(
+            name=eintrag["name"],
+            land="Unbekannt",  # ggf. ergänzen in JSON
+            kontinent=Kontinent(eintrag["kontinent"]),
+            kategorie=Kategorie(eintrag["kategorie"])
+        )
+        reiseziele.append(rz)
 
-    description = get_description(correct)
-    image_url = get_image(correct)
+    return reiseziele
 
-    return {
-        "question_text": description,
-        "image_url": image_url,
-        "options": options,
-        "correct": correct,
-        "details": {"name": correct, "booking_url": f"https://booking.com/search?dest={correct}"}
-    }
+def generiere_quizfrage(kategorie, kontinent, level):
+    # 1. Reiseziel-Auswahl basierend auf Nutzerpräferenzen
+    alle_zielorte = lade_reiseziele() 
+    gefiltert = [
+        rz for rz in alle_zielorte
+        if rz.kategorie.name == kategorie.name and rz.kontinent.name == kontinent.name
+    ]
+
+    # 2. Zufällige Antwortoptionen bestimmen
+    if len(gefiltert) < level.antwortanzahl:
+        raise ValueError("Nicht genug Reisezieloptionen für die Auswahl vorhanden.")
+
+    antwortoptionen = random.sample(gefiltert, level.antwortanzahl)
+    richtige_antwort = random.choice(antwortoptionen)
+
+    # 3. Hinweise abrufen (Hinweistext & Bild)
+    hinweistext = APIService.holeHinweistext(richtige_antwort)
+    bild_url = APIService.holeBildURL(richtige_antwort)
+
+    # 4. Quizfrage erzeugen
+    frage = Quizfrage(
+        hinweistext=hinweistext,
+        bild_url=bild_url,
+        antwortoptionen=antwortoptionen,
+        richtige_antwort=richtige_antwort
+    )
+
+    return frage
