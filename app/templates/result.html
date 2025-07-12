@@ -46,14 +46,18 @@
         <p>{{ reiseziel_beschreibung|safe }}</p>
     </div>
 
-    <!-- Booking CTA -->
-    <p class="mt-4"><strong>Aktuelle Reiseangebote nach {{ reiseziel_name }} entdecken</strong></p>
-    <a href="{{ booking_link }}" class="btn btn-custom" target="_blank">Auf Booking.com buchen</a>
-
-    <!-- Wikipedia-Link -->
-    <p class="mt-5"><strong>Mehr Details zum Reiseziel</strong></p>
-    <a href="{{ wikipedia_link }}" class="btn btn-outline-info" target="_blank">
-        Auf Wikipedia entdecken
+    <!-- Booking, Wikipedia CTA -->
+    <div class="mt-4">
+        <strong>Reiseangebote und mehr entdecken</strong>
+        <div class="d-flex flex-column flex-md-row gap-3 mt-3">
+            <a href="{{ booking_link }}" class="btn btn-custom flex-fill" target="_blank">
+                <i class="bi bi-box-arrow-up-right"></i> Auf Booking.com buchen
+            </a>
+            <a href="{{ wikipedia_link }}" class="btn btn-custom flex-fill" target="_blank">
+                <i class="bi bi-book"></i> Auf Wikipedia entdecken
+            </a>
+        </div>
+    </div>
     </a>
 </div>
 

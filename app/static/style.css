@@ -24,19 +24,31 @@ img {
 }
 
 .btn-custom {
-    background-color: #00695c;
-    color: white;
-    padding: 12px 30px;
-    font-size: 1.2rem;
+    background-color: #198754; /* Bootstrap "success"-grün */
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
 }
 
-.btn-custom:hover {
-    background-color: #004d40;
+.btn-custom:hover,
+.btn-custom:focus {
+    background-color: #146c43;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.5);
 }
 
+.btn-custom:disabled {
+    background-color: #a1d5bb;
+    cursor: not-allowed;
+    color: #fff;
+    opacity: 0.8;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
