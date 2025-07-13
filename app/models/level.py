@@ -9,7 +9,7 @@ class Level:
         return [
             Level("Sofasurfer", 2, 0),
             Level("Backpacker", 4, 1),
-            Level("Globetrotter", 10, 2)
+            Level("Globetrotter", 6, 2)
         ]
 
     @staticmethod

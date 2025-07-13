@@ -1,4 +1,5 @@
 import json
+import re
 from app.models.quiz import Quiz
 from app.models.quizfrage import Quizfrage
 from app.models.reiseziel import Reiseziel, ReisezielDetails
@@ -24,6 +25,14 @@ def lade_reiseziele():
 
     return reiseziele
 
+def zensiere_reiseziel_name(text, reiseziel_name):
+    """
+    Ersetzt alle Vorkommen des Reisezielnamens im Text durch 'Das Reiseziel'.
+    Dabei wird Groß- und Kleinschreibung ignoriert.
+    """
+    muster = re.compile(re.escape(reiseziel_name), re.IGNORECASE)
+    return muster.sub("Das Reiseziel", text)
+
 def generiere_quizfrage(kategorie, kontinent, level):
     # 1. Reiseziel-Auswahl basierend auf Nutzerpräferenzen
     alle_zielorte = lade_reiseziele() 
@@ -40,7 +49,8 @@ def generiere_quizfrage(kategorie, kontinent, level):
     richtige_antwort = random.choice(antwortoptionen)
 
     # 3. Hinweise abrufen (Hinweistext & Bild)
-    hinweistext = APIService.holeHinweistext(richtige_antwort)
+    original_text = APIService.holeHinweistext(richtige_antwort)
+    hinweistext = zensiere_reiseziel_name(original_text, richtige_antwort.name)
     bild_url = APIService.holeBildURL(richtige_antwort)
 
     # 4. Quizfrage erzeugen
