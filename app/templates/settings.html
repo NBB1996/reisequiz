@@ -2,26 +2,30 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Reisequiz – Einstellungen</title>
+    <title>Reisequiz - Einstellungen</title>
 
-    <!-- Bootstrap (optional) -->
+    <!-- Bootstrap & Icons für Layout & UI-Komponenten  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Eigenes CSS -->
+    <!-- Zentrales CSS (enthält z. B. .logo-icon, .box-light, .btn-custom) -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
     <div class="container">
+        <!-- Seitenüberschrift -->
         <h1>
-            <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" style="vertical-align: middle; margin-right: 8px;">
+            <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" class="logo-icon">
             Reisequiz
         </h1>
         <h2>Quiz Einstellungen <i class="bi bi-geo-alt-fill"></i></h2>
         <p>Passe das Quiz nach deinen Wünschen an:</p>
 
+        <!-- Quiz-Einstellungsformular -->
         <form id="quizSettingsForm" method="POST" action="{{ url_for('main.quiz') }}">
             <div class="row justify-content-center">
+
                 <!-- Kategorie / Kontinent -->
                 <div class="col-md-5 p-3 rounded box-light">
                     <h5><i class="bi bi-globe2"></i> Quiz Kategorie</h5>
@@ -40,24 +44,16 @@
                     </select>
                 </div>
 
-                <!-- Schwierigkeit -->
+                <!-- Schwierigkeitslevel auswählen -->
                 <div class="col-md-5 p-3 rounded box-light">
                     <h5><i class="bi bi-triangle-fill"></i> Schwierigkeit-Level</h5>
                     <div class="form-check mb-2 text-start">
                         {% for level in level_stufen %}
                         <div class="form-check mb-2 text-start">
-                            <input class="form-check-input" type="radio" name="level" id="level{{ loop.index }}" value="{{ level.name }}">
+                            <input class="form-check-input" type="radio" name="level" id="level{{ loop.index }}" value="{{ level.name }}" required>
                             <label class="form-check-label" for="level{{ loop.index }}">
                                 <strong>{{ level.name }}</strong><br>
-                                {% if level.name == 'Leicht' %}
-                                <small>Einfach – Für Reise-Anfänger</small>
-                                {% elif level.name == 'Mittel' %}
-                                <small>Mittel – Für Reise-Erfahrene</small>
-                                {% elif level.name == 'Schwer' %}
-                                <small>Schwer – Für Reise-Experten</small>
-                                {% else %}
-                                <small>Individuelles Level</small>
-                                {% endif %}
+                                <small>{{ level.beschreibung }}</small>
                             </label>
                         </div>
                         {% endfor %}
@@ -65,7 +61,7 @@
                 </div>
             </div>
 
-            <!-- Fehlermeldung -->
+            <!-- Validierungsnachricht  -->
             <div id="error-message" class="text-danger mt-3" style="display:none;">
                 Bitte wähle alle Felder aus, bevor du das Quiz startest.
             </div>
@@ -74,18 +70,21 @@
             <button type="submit" class="btn-custom mt-4" id="startButton" disabled>Quiz starten</button>
         </form>
 
+        <!-- Quellenhinweis -->
         <div class="info">
             <i class="bi bi-info-circle-fill"></i> Fragen und Informationen basieren auf den Quellen:<br>
             <strong>Wikipedia und Wikivoyage</strong>
         </div>
     </div>
 
+    <!-- Validierungsscript  -->
     <script>
         // Validierung: alle Felder müssen ausgefüllt sein
         const form = document.getElementById('quizSettingsForm');
         const startButton = document.getElementById('startButton');
         const errorMsg = document.getElementById('error-message');
 
+        // Prüft ob alle Felder ausgefüllt sind
         form.addEventListener('input', () => {
             const kategorie = form.kategorie.value;
             const kontinent = form.kontinent.value;
@@ -99,6 +98,7 @@
             }
         });
 
+        // Verhindert Abschicken, wenn Button deaktiviert ist
         form.addEventListener('submit', (e) => {
             if (startButton.disabled) {
                 e.preventDefault();
@@ -106,5 +106,6 @@
             }
         });
     </script>
+
 </body>
 </html>

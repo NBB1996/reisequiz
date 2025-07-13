@@ -60,7 +60,7 @@ def main():
                 print(f"Fehler bei {kategorie} in {kontinent}: {e}")
             time.sleep(2)  # Warten, um das Rate-Limit nicht zu verletzen
 
-    with open("reiseziel.json", "w", encoding="utf-8") as f:
+    with open("app/data/reiseziel.json", "w", encoding="utf-8") as f:
         json.dump(alle_reiseziele, f, indent=2, ensure_ascii=False)
 
     print(f"Fertig! {len(alle_reiseziele)} Reiseziele gespeichert.")

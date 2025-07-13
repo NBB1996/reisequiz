@@ -2,20 +2,20 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Reisequiz Ergebnis</title>
+    <title>Reisequiz - Ergebnis</title>
 
-    <!-- Bootstrap & Icons -->
+    <!-- Bootstrap & Icons für Layout & UI-Komponenten -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Eigenes CSS -->
+    <!-- Zentrales CSS (enthält z. B. .logo-icon, .box-light, .btn-custom) -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Header -->
+    <!-- Kopfzeile mit Titel & Neustart-Button -->
     <header class="d-flex justify-content-between align-items-center mb-4">
         <h1>
             <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" style="vertical-align: middle; margin-right: 8px;">
@@ -25,22 +25,25 @@
     </header>
 
     <!-- Ergebnisbox -->
-    <div class="box-light text-center p-4">
+    <section class="result-box box-light text-center p-3">
         {% if korrekt %}
-            <div class="text-success fs-1"><i class="bi bi-check-circle-fill"></i></div>
-            <h3 class="mt-2">Richtig!</h3>
+            <div class="text-success fs-3"><i class="bi bi-check-circle-fill"></i></div>
+            <h4 class="mt-2 mb-2">Richtig!</h4>
         {% else %}
-            <div class="text-danger fs-1"><i class="bi bi-x-circle-fill"></i></div>
-            <h3 class="mt-2">Leider falsch!</h3>
+            <div class="text-danger fs-3"><i class="bi bi-x-circle-fill"></i></div>
+            <h4 class="mt-2 mb-2">Leider falsch!</h4>
         {% endif %}
-        <a href="{{ url_for('main.settings') }}" class="btn btn-custom mt-2">Erneut spielen</a>
-    </div>
 
-    <!-- Reiseziel -->
+        <a href="{{ url_for('main.settings') }}" class="btn btn-custom btn-sm mt-2">Erneut spielen</a>
+    </section>
+
+    <!-- Reisezielüberschrift  -->
     <h4 class="mt-4"><i class="bi bi-geo-alt-fill"></i> Das korrekte Reiseziel ist: <b>{{ reiseziel_name }}</b></h4>
+    
+    <!-- Bild zum Reiseziel  -->
     <img src="{{ bild_url }}" alt="Reiseziel" class="quiz-image mb-3 img-fluid rounded">
 
-    <!-- Beschreibung -->
+    <!-- Beschreibung zum Reiseziel -->
     <div class="box-sub p-3 text-start">
         <h5><strong>Über {{ reiseziel_name }}</strong></h5>
         <p>{{ reiseziel_beschreibung|safe }}</p>
