@@ -75,9 +75,9 @@ def generiere_quizfrage(kategorie, kontinent, level):
     richtige_antwort = random.choice(antwortoptionen)
 
     # 3. Hinweise abrufen (Hinweistext & Bild)
-    original_text = APIService.holeHinweistext(richtige_antwort)
+    original_text = APIService.hole_hinweistext(richtige_antwort)
     hinweistext = zensiere_reiseziel_name(original_text, richtige_antwort.name)
-    bild_url = APIService.holeBildURL(richtige_antwort)
+    bild_url = APIService.hole_bild_url(richtige_antwort)
 
     # 4. Quizfrage erzeugen
     frage = Quizfrage(
@@ -99,10 +99,10 @@ def erzeuge_reiseziel_details(reiseziel):
     Returns:
         ReisezielDetails: Objekt mit Bild, Beschreibung, Buchungs- und Wikipedia-Link
     """
-    beschreibung = APIService.holeHinweistext(reiseziel)
-    bild_url = APIService.holeBildURL(reiseziel)
-    booking_url = BookingDeeplinkGenerator.bereitstellungDeeplink(reiseziel)
-    wikipedia_url = APIService.holeWikipediaLink(reiseziel)
+    beschreibung = APIService.hole_hinweistext(reiseziel)
+    bild_url = APIService.hole_bild_url(reiseziel)
+    booking_url = BookingDeeplinkGenerator.bereitstellung_deeplink(reiseziel)
+    wikipedia_url = APIService.hole_wikipedia_link(reiseziel)
 
     return ReisezielDetails(
         name=reiseziel.name,
