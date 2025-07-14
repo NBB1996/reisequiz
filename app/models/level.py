@@ -16,11 +16,14 @@ class Level:
 
     @staticmethod
     def get_all() -> list["Level"]:
-        """Liefert alle verfügbaren Schwierigkeitsstufen."""
+        """
+        Liefert alle verfügbaren Schwierigkeitsstufen. 
+        2,4,6 sind die möglichen Antwortoptionen und 40,15,6 der Grad der Verpixelung.
+        """
         return [
-            Level("Sofasurfer", 2, 0, "Einfach - Für Reise-Anfänger"),
-            Level("Backpacker", 4, 1, "Mittel - Für Reise-Erfahrene"),
-            Level("Globetrotter", 6, 2, "Schwer - Für Reise-Profis")
+            Level("Sofasurfer", 2, 70, "Einfach - Für Reise-Anfänger"),     # kaum verpixelt
+            Level("Backpacker", 4, 15, "Mittel - Für Reise-Erfahrene"),     # mittel verpixelt
+            Level("Globetrotter", 6, 6, "Schwer - Für Reise-Profis")        # stark verpixelt
         ]
 
     @staticmethod

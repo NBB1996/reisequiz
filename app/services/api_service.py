@@ -7,6 +7,18 @@ class APIService:
     Liefert Daten über Wikipedia APIs für Quiz-Hinweise, Bilder und Links.
     """
 
+    # Zentral definierter User-Agent für alle Wikimedia-Anfragen
+    HEADERS = {
+        "User-Agent": "ReisequizApp/1.0 (kontakt@mein-reisequiz.de)"
+    }
+
+    @staticmethod
+    def get_standard_headers():
+        """
+        Gibt den standardmäßigen Header zurück, z. B. für andere Module wie Bildverarbeitung.
+        """
+        return APIService.HEADERS
+
     @staticmethod
     def hole_hinweistext(reiseziel: Reiseziel) -> str:
         """

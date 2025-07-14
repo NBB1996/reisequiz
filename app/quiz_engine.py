@@ -1,8 +1,12 @@
 import json
 import re
 import random
+import requests
+import base64
 
-from app.models.quiz import Quiz
+from io import BytesIO
+from PIL import Image
+from PIL.Image import Resampling
 from app.models.quizfrage import Quizfrage
 from app.models.reiseziel import Reiseziel, ReisezielDetails
 from app.services.api_service import APIService
@@ -10,6 +14,7 @@ from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
 from app.services.booking_link_generator import BookingDeeplinkGenerator
+
 
 
 def lade_reiseziele(pfad="app/static/data/reiseziel.json"):
@@ -48,6 +53,48 @@ def zensiere_reiseziel_name(text, reiseziel_name):
     muster = re.compile(re.escape(reiseziel_name), re.IGNORECASE)
     return muster.sub("__", text)
 
+def verpixle_bild(bild_url, level):
+    """
+    Verpixelt ein Bild basierend auf der verpixelung-Auflösung im Level-Objekt.
+    Args:
+        bild_url (str): Bild-URL (z.B. Wikipedia-Thumbnail).
+        level (Level): Objekt mit Attribut 'verpixelung' (z.B. 6, 15, 70)
+    Returns:
+        str: Base64-codiertes Bild als Data-URL (JPEG oder PNG), oder Original-URL bei Fehlern.
+    """
+    try:
+        verpixelung = level.verpixelung
+        if not isinstance(verpixelung, int) or verpixelung < 1:
+            raise ValueError("Ungültiger Verpixelungswert im Level.")
+
+        headers = APIService.get_standard_headers()
+        response = requests.get(bild_url, headers=headers, timeout=5)
+        response.raise_for_status()
+        
+        img = Image.open(BytesIO(response.content)).convert("RGB")
+        original_size = img.size
+
+        # Sicherheits-Check: nicht stärker verpixeln als Bildgröße
+        pixel_size = max(1, min(verpixelung, original_size[0], original_size[1]))
+
+        # Verpixeln durch Runter- und Hochskalierung
+        klein = img.resize((pixel_size, pixel_size), resample=Resampling.NEAREST)
+        verpixelt = klein.resize(original_size, Resampling.NEAREST)
+
+        # Format erkennen und korrekt speichern (PNG vs JPEG)
+        format = "PNG" if bild_url.lower().endswith(".png") else "JPEG"
+        mime_type = "image/png" if format == "PNG" else "image/jpeg"
+
+        buffer = BytesIO()
+        verpixelt.save(buffer, format=format)
+        img_base64 = base64.b64encode(buffer.getvalue()).decode()
+
+        return f"data:{mime_type};base64,{img_base64}"
+
+    except Exception as e:
+        print(f"[Fehler beim Verpixeln] {e}")
+        return bild_url  # Fallback: nicht verpixelt
+
 def generiere_quizfrage(kategorie, kontinent, level):
     """
     Erstellt eine neue Quizfrage anhand der gewählten Einstellungen.
@@ -77,7 +124,7 @@ def generiere_quizfrage(kategorie, kontinent, level):
     # 3. Hinweise abrufen (Hinweistext & Bild)
     original_text = APIService.hole_hinweistext(richtige_antwort)
     hinweistext = zensiere_reiseziel_name(original_text, richtige_antwort.name)
-    bild_url = APIService.hole_bild_url(richtige_antwort)
+    bild_url = verpixle_bild(APIService.hole_bild_url(richtige_antwort), level)
 
     # 4. Quizfrage erzeugen
     frage = Quizfrage(
