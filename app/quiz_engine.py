@@ -15,8 +15,6 @@ from app.models.kontinent import Kontinent
 from app.models.level import Level
 from app.services.booking_link_generator import BookingDeeplinkGenerator
 
-
-
 def lade_reiseziele(pfad="app/static/data/reiseziel.json"):
     """
     Lädt alle verfügbaren Reiseziele aus der in data hinterlegten reiseziel.json Datei.
@@ -70,7 +68,7 @@ def verpixle_bild(bild_url, level):
         headers = APIService.get_standard_headers()
         response = requests.get(bild_url, headers=headers, timeout=5)
         response.raise_for_status()
-        
+
         img = Image.open(BytesIO(response.content)).convert("RGB")
         original_size = img.size
 
@@ -149,7 +147,7 @@ def erzeuge_reiseziel_details(reiseziel):
     beschreibung = APIService.hole_hinweistext(reiseziel)
     bild_url = APIService.hole_bild_url(reiseziel)
     booking_url = BookingDeeplinkGenerator.bereitstellung_deeplink(reiseziel)
-    wikipedia_url = APIService.hole_wikipedia_link(reiseziel)
+    wikipedia_url = APIService.wikipedia_link_generator(reiseziel)
 
     return ReisezielDetails(
         name=reiseziel.name,

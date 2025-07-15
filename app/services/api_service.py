@@ -60,7 +60,7 @@ class APIService:
         return APIService._placeholder_bild()
 
     @staticmethod
-    def hole_wikipedia_link(reiseziel: Reiseziel) -> str:
+    def wikipedia_link_generator(reiseziel: Reiseziel) -> str:
         """
         Generiert einen Link zur deutschsprachigen Wikipedia-Seite des Reiseziels.
         Args:
@@ -78,5 +78,5 @@ class APIService:
         Returns:
             str: Platzhalterbild-URL.
         """
-        return "https://via.placeholder.com/400x250?text=Kein+Bild"
+        return "/static/platzhalter.jpg"
 
