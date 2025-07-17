@@ -15,7 +15,7 @@ class APIService:
     @staticmethod
     def get_standard_headers():
         """
-        Gibt den standardmäßigen Header zurück, z. B. für andere Module wie Bildverarbeitung.
+        Gibt den standardmäßigen Header zurück, z.B. für andere Module wie Bildverarbeitung.
         """
         return APIService.HEADERS
 
@@ -54,25 +54,13 @@ class APIService:
             if response.status_code == 200:
                 data = response.json()
                 thumbnail = data.get("thumbnail", {})
-                return thumbnail.get("source", APIService._placeholder_bild())
+                return thumbnail.get("source", APIService.placeholder_bild())
         except requests.RequestException as e:
             print(f"[Fehler beim Bildabruf für {reiseziel.name}]: {e}")
-        return APIService._placeholder_bild()
+        return APIService.placeholder_bild()
 
     @staticmethod
-    def wikipedia_link_generator(reiseziel: Reiseziel) -> str:
-        """
-        Generiert einen Link zur deutschsprachigen Wikipedia-Seite des Reiseziels.
-        Args:
-            reiseziel (Reiseziel): Zielort.
-        Returns:
-            str: URL zur Wikipedia-Seite.
-        """
-        name_encoded = quote(reiseziel.name)
-        return f"https://de.wikipedia.org/wiki/{name_encoded}"
-
-    @staticmethod
-    def _placeholder_bild() -> str:
+    def placeholder_bild() -> str:
         """
         Gibt die URL eines Standard-Platzhalterbilds zurück.
         Returns:

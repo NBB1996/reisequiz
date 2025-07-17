@@ -24,10 +24,3 @@ class Quizfrage:
         self.richtige_antwort = richtige_antwort
         self.benutzerantwort: Reiseziel | None = None
 
-    def ist_richtig(self) -> bool:
-        """
-        Prüft, ob die vom Nutzer gegebene Antwort korrekt ist.
-        Returns:
-            True, wenn die Benutzerantwort mit der richtigen Antwort übereinstimmt.
-        """
-        return self.benutzerantwort == self.richtige_antwort

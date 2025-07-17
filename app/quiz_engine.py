@@ -13,7 +13,7 @@ from app.services.api_service import APIService
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
-from app.services.booking_link_generator import BookingDeeplinkGenerator
+from app.services.link_generator import LinkGenerator
 
 def lade_reiseziele(pfad="app/static/data/reiseziel.json"):
     """
@@ -146,8 +146,8 @@ def erzeuge_reiseziel_details(reiseziel):
     """
     beschreibung = APIService.hole_hinweistext(reiseziel)
     bild_url = APIService.hole_bild_url(reiseziel)
-    booking_url = BookingDeeplinkGenerator.bereitstellung_deeplink(reiseziel)
-    wikipedia_url = APIService.wikipedia_link_generator(reiseziel)
+    booking_url = LinkGenerator.booking_deeplink(reiseziel)
+    wikipedia_url = LinkGenerator.wikipedia_link_generator(reiseziel)
 
     return ReisezielDetails(
         name=reiseziel.name,
