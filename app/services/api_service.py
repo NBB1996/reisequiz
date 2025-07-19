@@ -1,5 +1,6 @@
 import requests
-from urllib.parse import quote
+import bleach
+from urllib.parse import quote, urlparse
 from app.models.reiseziel import Reiseziel
 
 class APIService:
@@ -30,9 +31,12 @@ class APIService:
         """
         url = f"https://de.wikipedia.org/api/rest_v1/page/summary/{quote(reiseziel.name)}"
         try:
-            response = requests.get(url, timeout=5)
+            response = requests.get(url, headers=APIService.HEADERS, timeout=5)
             if response.status_code == 200:
-                return response.json().get("extract", "Hinweis nicht verfügbar.")
+                # raw/clean als Sicherheitsmaßnahme um nur reinen Text zurück zu geben. 
+                raw = response.json().get("extract", "")
+                clean = bleach.clean(raw, tags=[], strip=True)
+                return clean or "Hinweis nicht verfügbar."
         except requests.RequestException as e:
             print(f"[Fehler beim Hinweistext für {reiseziel.name}]: {e}")
         return "Hinweis nicht verfügbar."
@@ -50,13 +54,16 @@ class APIService:
         url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{quote(titel)}"
 
         try:
-            response = requests.get(url, timeout=5)
+            response = requests.get(url, headers=APIService.HEADERS, timeout=5)
             if response.status_code == 200:
-                data = response.json()
-                thumbnail = data.get("thumbnail", {})
-                return thumbnail.get("source", APIService.placeholder_bild())
+                thumb = response.json().get("thumbnail", {})
+                src = thumb.get("source", "")
+                # URL validieren: nur http(s)-Schema zulassen
+                parsed = urlparse(src)
+                if parsed.scheme in ("http", "https"):
+                    return src
         except requests.RequestException as e:
-            print(f"[Fehler beim Bildabruf für {reiseziel.name}]: {e}")
+            print(f"[Fehler Bildabruf {reiseziel.name}]: {e}")
         return APIService.placeholder_bild()
 
     @staticmethod

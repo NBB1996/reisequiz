@@ -5,8 +5,16 @@ from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
 from app.models.reiseziel import ReisezielDetails
+from urllib.parse import urlparse
 
 main = Blueprint('main', __name__)
+
+def is_allowed_link(url: str) -> bool:
+    """
+    Erlaubt nur Links zu wikipedia.org oder booking.com.
+    """
+    host = urlparse(url).hostname or ""
+    return host.endswith("wikipedia.org") or host.endswith("booking.com")
 
 @main.route('/')
 def index():
@@ -94,6 +102,15 @@ def result():
     if not details_data:
         flash("Fehlende Reisedetails in der Session.")
         return redirect(url_for("main.settings"))
+    
+    # Sicherheitsprüfung, dass nur korrekte Booking, Wikipedia Links verwendet werden
+    booking = details_data["booking_link"]
+    wiki   = details_data["wikipedia_link"]
+
+    if not is_allowed_link(booking):
+        booking = "#"
+    if not is_allowed_link(wiki):
+        wiki = "#"
 
     reiseziel_details = ReisezielDetails(
         name=richtige_antwort.name,
