@@ -35,6 +35,8 @@ cd reisequiz
 2. Entpacke die ZIP-Datei
 3. Öffne den Ordner im Windows-Explore
 
+⚠️ Hinweis: Beim ersten Ausführen von `run.bat` erscheint möglicherweise eine Sicherheitswarnung von Windows SmartScreen. Klicke auf **"Weitere Informationen"** und anschließend auf **"Trotzdem ausführen"**, um fortzufahren. Der Hinweis erscheint, da für das Projekt keine Digitale Signautr vorliegt. 
+
 ### Schritt 2: Anwendung starten
 1. Doppelklicke auf run.bat
 2. Ein Konsolenfenster öffnet sich:
