@@ -92,6 +92,29 @@ def verpixle_bild(bild_url, level):
     except Exception as e:
         print(f"[Fehler beim Verpixeln] {e}")
         return bild_url  # Fallback: nicht verpixelt
+    
+def erzeuge_reiseziel_details(reiseziel):
+    """
+    Erzeugt Detailinformationen zu einem Reiseziel über API-Zugriffe.
+
+    Args:
+        reiseziel (Reiseziel): Zielort, für den Details generiert werden sollen
+
+    Returns:
+        ReisezielDetails: Objekt mit Bild, Beschreibung, Buchungs- und Wikipedia-Link
+    """
+    beschreibung = APIService.hole_hinweistext(reiseziel)
+    bild_url = APIService.hole_bild_url(reiseziel)
+    booking_url = LinkGenerator.booking_deeplink(reiseziel)
+    wikipedia_url = LinkGenerator.wikipedia_link_generator(reiseziel)
+
+    return ReisezielDetails(
+        name=reiseziel.name,
+        beschreibung=beschreibung,
+        image_url=bild_url,
+        booking_url=booking_url,
+        wikipedia_url=wikipedia_url
+    )
 
 def generiere_quizfrage(kategorie, kontinent, level):
     """
@@ -120,39 +143,15 @@ def generiere_quizfrage(kategorie, kontinent, level):
     richtige_antwort = random.choice(antwortoptionen)
 
     # 3. Hinweise abrufen (Hinweistext & Bild)
-    original_text = APIService.hole_hinweistext(richtige_antwort)
-    hinweistext = zensiere_reiseziel_name(original_text, richtige_antwort.name)
-    bild_url = verpixle_bild(APIService.hole_bild_url(richtige_antwort), level)
+    details = erzeuge_reiseziel_details(richtige_antwort)
+    hinweistext = zensiere_reiseziel_name(details.beschreibung, richtige_antwort.name)
+    bild_verpixelt = verpixle_bild(details.image_url, level)
 
     # 4. Quizfrage erzeugen
-    frage = Quizfrage(
+    return Quizfrage(
         hinweistext=hinweistext,
-        bild_url=bild_url,
+        bild_url=bild_verpixelt,
         antwortoptionen=antwortoptionen,
         richtige_antwort=richtige_antwort
-    )
+    ), details
 
-    return frage
-
-def erzeuge_reiseziel_details(reiseziel):
-    """
-    Erzeugt Detailinformationen zu einem Reiseziel über API-Zugriffe.
-
-    Args:
-        reiseziel (Reiseziel): Zielort, für den Details generiert werden sollen
-
-    Returns:
-        ReisezielDetails: Objekt mit Bild, Beschreibung, Buchungs- und Wikipedia-Link
-    """
-    beschreibung = APIService.hole_hinweistext(reiseziel)
-    bild_url = APIService.hole_bild_url(reiseziel)
-    booking_url = LinkGenerator.booking_deeplink(reiseziel)
-    wikipedia_url = LinkGenerator.wikipedia_link_generator(reiseziel)
-
-    return ReisezielDetails(
-        name=reiseziel.name,
-        beschreibung=beschreibung,
-        image_url=bild_url,
-        booking_url=booking_url,
-        wikipedia_url=wikipedia_url
-    )

@@ -4,6 +4,7 @@ from app.models.quiz import Quiz
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
+from app.models.reiseziel import ReisezielDetails
 
 main = Blueprint('main', __name__)
 
@@ -45,7 +46,7 @@ def quiz():
         return redirect(url_for("main.settings"))
 
     # 4. Quizfrage generieren
-    frage = generiere_quizfrage(kategorie, kontinent, level)
+    frage, details = generiere_quizfrage(kategorie, kontinent, level)
 
     # 5. Quizobjekt erzeugen und speichern
     quiz = Quiz(kategorie, kontinent, level)
@@ -53,10 +54,13 @@ def quiz():
 
     # 6. Session speichern
     session["quiz_config"] = {
-        "kategorie": kategorie.name,
-        "kontinent": kontinent.name,
-        "level": level.name,
-        "richtige_antwort": frage.richtige_antwort.name
+        "richtige_antwort": frage.richtige_antwort.name, 
+        "details": {
+            "beschreibung": details.beschreibung,
+            "booking_link": details.booking_url,
+            "wikipedia_link": details.wikipedia_url,
+            "bild_url": details.image_url
+        }
     }
 
     # 7. Template anzeigen
@@ -85,8 +89,19 @@ def result():
     # 4. Vergleich mit Nutzereingabe 
     korrekt = (ausgewaehlt == richtige_antwort.name)
 
-    # 5. Detailinformationen laden
-    reiseziel_details = erzeuge_reiseziel_details(richtige_antwort)
+    # 5. Detailinformationen aus Session laden
+    details_data = quiz_config.get("details")
+    if not details_data:
+        flash("Fehlende Reisedetails in der Session.")
+        return redirect(url_for("main.settings"))
+
+    reiseziel_details = ReisezielDetails(
+        name=richtige_antwort.name,
+        beschreibung=details_data["beschreibung"],
+        image_url=details_data["bild_url"],
+        booking_url=details_data["booking_link"],
+        wikipedia_url=details_data["wikipedia_link"]
+    )
 
     # 6. Ergebnis anzeigen mit Reisedetails und Links für weitere Details, Booking Buchungslink
     return render_template(

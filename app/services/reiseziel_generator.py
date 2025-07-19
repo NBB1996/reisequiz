@@ -39,7 +39,7 @@ def get_reiseziele(
     instance_id: str,
     continent_id: str,
     kategorie: str,
-    kontinent_name: str,
+    kontinent: str,
     limit: int = 50
 ) -> List[Dict[str, str]]:
     """
@@ -74,7 +74,7 @@ def get_reiseziele(
         {
             "name": item["name"]["value"],
             "kategorie": kategorie,
-            "kontinent": kontinent_name
+            "kontinent": kontinent
         }
         for item in data["results"]["bindings"]
     ]
@@ -87,14 +87,14 @@ def main():
     """
     alle_reiseziele: List[Dict[str, str]] = []
 
-    for kontinent_name, kontinent_id in KONTINENTE.items():
+    for kontinent, kontinent_id in KONTINENTE.items():
         for kategorie, instanz_id in INSTANZEN.items():
-            print(f"Lade {kategorie} in {kontinent_name} ...")
+            print(f"Lade {kategorie} in {kontinent} ...")
             try:
-                ziele = get_reiseziele(instanz_id, kontinent_id, kategorie, kontinent_name)
+                ziele = get_reiseziele(instanz_id, kontinent_id, kategorie, kontinent)
                 alle_reiseziele.extend(ziele)
             except requests.exceptions.HTTPError as e:
-                print(f"Fehler bei {kategorie} in {kontinent_name}: {e}")
+                print(f"Fehler bei {kategorie} in {kontinent}: {e}")
             time.sleep(2)  # Pausieren, um API-Rate-Limit nicht zu verletzen
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
