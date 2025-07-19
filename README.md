@@ -70,21 +70,24 @@ python app.py
 http://localhost:5000
 
 ## Projektstruktur
+```text
 reisequiz/
-├─ app/
-│  ├─ models/                   # Datenmodelle: Kategorien, Level, Reiseziel, etc.
-│  ├─ services/                 # API-Zugriff und Link-Generierung
-│  ├─ static/                   # CSS, Bilder, JSON-Daten
-│  │  ├─ data/reiseziel.json    # Beispieldaten für das Quiz
-│  ├─ templates/                # HTML-Vorlagen (Jinja2)
-│  ├─ quiz_engine.py            # Spiellogik
-│  ├─ routes.py                 # Flask-Routen
-│  └─ __init__.py               # App-Initialisierung
-├─ tests/                       # Testfälle
-├─ run.bat                      # Startskript für Windows
-├─ requirements.txt             # Python-Abhängigkeiten
-├─ README.md                    # Diese Anleitung
-└─ run.py                       # Startpunkt der App, wenn über Python ausgeführt
+├── app/
+│   ├── models/              # Datenmodelle: Kategorie, Level, Reiseziel etc.
+│   ├── services/            # API-Zugriff und Link-Generierung
+│   ├── static/              # CSS, Bilder, JSON-Daten
+│   │   └── data/
+│   │       └── reiseziel.json   # Beispieldaten für das Quiz
+│   ├── templates/           # HTML-Vorlagen (Jinja2)
+│   ├── quiz_engine.py       # Spiellogik
+│   ├── routes.py            # Flask-Routen
+│   └── __init__.py          # App-Initialisierung
+├── tests/                   # Testfälle
+├── run.bat                  # Startskript für Windows
+├── requirements.txt         # Python-Abhängigkeiten
+├── README.md                # Diese Anleitung
+└── run.py                   # Alternativer Startpunkt (direkt via Python)
+```
 
 ## Häufige Probleme
 | Problem                                | Lösung                                                                   |
