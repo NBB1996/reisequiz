@@ -6,5 +6,5 @@ if not exist venv (
   pip install -r requirements.txt
 )
 venv\Scripts\activate
-python app.py
+python run.py
 pause
