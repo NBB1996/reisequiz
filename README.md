@@ -1,12 +1,14 @@
 # 🌍 Reisequiz: Errate das Reiseziel
-Ein interaktives Quiz-Spiel, das dich mit Hinweisen herausfordert, ein Reiseziel zu erraten – und dich am Ende direkt zur Buchung schickt!
+Du suchst Inspiration für dein nächstes Reiseziel. Wähle deinen präferierten Kontinent aus und errate spanende Reiseziele. 
+Im Laufe des Spiels bekommst du ein Bild und Hinweistext zu einer Region oder Stadt angezeigt und musst erraten, um welches Reiseziel es sich handelt.
+Wenn du mehr über die Region oder Stadt wissen möchtest kannst du dich auf der Ergebnisseite direkt auf Booking oder Wikipedia zu mehr Details informieren. 
 
 ---
 
 ## 🚀 Features
 - Drei Schwierigkeitsgrade: Sofasurfer, Backpacker, Globetrotter
 - Kategorien: Städte oder Regionen weltweit
-- Automatisch generierte Hinweise über Wikipedia/Wikivoyage
+- Automatisch generierte Hinweise über Wikipedia
 - Weiterleitung zum passenden Angebot auf Booking.com
 
 ---
