@@ -62,6 +62,9 @@ def quiz():
 
     # 6. Session speichern
     session["quiz_config"] = {
+        "kategorie": kategorie_name,   
+        "kontinent": kontinent_name, 
+        "level": level_name,
         "richtige_antwort": frage.richtige_antwort.name, 
         "details": {
             "beschreibung": details.beschreibung,
@@ -72,7 +75,7 @@ def quiz():
     }
 
     # 7. Template anzeigen
-    return render_template("quiz.html", frage=frage)
+    return render_template("quiz.html", frage=frage, quiz_config=session["quiz_config"])
 
 @main.route("/result", methods=["POST"])
 def result():
