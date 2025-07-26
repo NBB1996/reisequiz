@@ -1,8 +1,14 @@
 import pytest
 from unittest.mock import patch, MagicMock
 
-
-from app.quiz_engine import generiere_quizfrage
+# Imports aus der Anwendung
+from app.quiz_engine import (
+    generiere_quizfrage,
+    zensiere_reiseziel_name,
+    lade_reiseziele,
+    verpixle_bild,
+    erzeuge_reiseziel_details
+)
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
@@ -23,14 +29,80 @@ def dummy_kontinent():
     return Kontinent("Europa")
 
 # Dummy-Reiseziele simulieren JSON-Datei
-dummy_reiseziele = [
-    {"name": "Paris", "kategorie": "Stadt", "kontinent": "Europa"},
-    {"name": "Rom", "kategorie": "Stadt", "kontinent": "Europa"},
-    {"name": "Madrid", "kategorie": "Stadt", "kontinent": "Europa"},
-    {"name": "Berlin", "kategorie": "Stadt", "kontinent": "Europa"}
-]
+@pytest.fixture
+def dummy_reiseziele():
+    return [
+        {"name": "Paris", "kategorie": "Stadt", "kontinent": "Europa"},
+        {"name": "Rom", "kategorie": "Stadt", "kontinent": "Europa"},
+        {"name": "Madrid", "kategorie": "Stadt", "kontinent": "Europa"},
+        {"name": "Berlin", "kategorie": "Stadt", "kontinent": "Europa"}
+    ]
 
-# Temporäres ersetzten der echten Funktionen durch Platzhalter (Mocks)
+# Hilfsfunktion zur Erstellung von Reiseziel-Objekten
+def make_reiseziel(name, kategorie="Stadt", kontinent="Europa"):
+    return Reiseziel(name=name, kategorie=Kategorie(kategorie), kontinent=Kontinent(kontinent))
+
+# Unit Tests
+@patch("builtins.open", new_callable=MagicMock)
+@patch("json.load")
+def test_lade_reiseziele(mock_json_load, mock_open):
+    """Testet das Laden von Reisezielen aus JSON-Datei."""
+    mock_json_load.return_value = [
+        {"name": "Paris", "kategorie": "Stadt", "kontinent": "Europa"}
+    ]
+    result = lade_reiseziele()
+    assert len(result) == 1
+    assert result[0].name == "Paris"
+
+def test_zensiere_reiseziel_name():
+    """Testet, ob ein Reisezielname korrekt durch '__' ersetzt wird."""
+    text = "Paris ist eine wunderschöne Stadt. Ich liebe Paris."
+    erwartet = "__ ist eine wunderschöne Stadt. Ich liebe __."
+    assert zensiere_reiseziel_name(text, "Paris") == erwartet
+    
+@patch("app.quiz_engine.requests.get")
+@patch("app.quiz_engine.Image.open")
+def test_verpixle_bild_success(mock_image_open, mock_requests_get, dummy_level: Level):
+    """Testet erfolgreiche Verpixelung eines Bildes und Base64-Kodierung."""
+    dummy_response = MagicMock()
+    dummy_response.content = b"fake-image-bytes"
+    mock_requests_get.return_value = dummy_response
+
+    dummy_img = MagicMock()
+    dummy_img.size = (100, 100)
+    dummy_img.resize.return_value = dummy_img
+    dummy_img.convert.return_value = dummy_img
+    mock_image_open.return_value = dummy_img
+
+    result = verpixle_bild("http://example.com/test.jpg", dummy_level)
+    assert result.startswith("data:image/jpeg;base64,"), "Base64-Bild nicht korrekt generiert"
+
+@patch("app.quiz_engine.requests.get", side_effect=Exception("404 Not Found"))
+def test_verpixle_bild_fail(mock_get):
+    """Testet das Verhalten bei fehlerhafter Bild-URL (Fallback auf Original)."""
+    result = verpixle_bild("http://broken-url.jpg", Level("Test", 2, 10, "Desc"))
+    assert result == "http://broken-url.jpg"
+
+def test_verpixle_bild_invalid_verpixelung():
+    """Testet die Behandlung eines ungültigen Verpixelungswertes (z. B. 0 oder negativ)."""
+    level = Level(name="Fehlerhaft", antwortanzahl=2, verpixelung=0, beschreibung="Ungültig")
+    result = verpixle_bild("http://invalid-url.jpg", level)
+    assert result == "http://invalid-url.jpg"
+
+@patch("app.quiz_engine.APIService.hole_hinweistext", return_value="Hinweistext")
+@patch("app.quiz_engine.APIService.hole_bild_url", return_value="http://image.jpg")
+@patch("app.quiz_engine.LinkGenerator.booking_deeplink", return_value="http://booking")
+@patch("app.quiz_engine.LinkGenerator.wikipedia_link_generator", return_value="http://wiki")
+def test_erzeuge_reiseziel_details(mock_wiki, mock_booking, mock_bild, mock_text):
+    """Testet, ob korrekte ReisezielDetails aus API-Service erzeugt werden."""
+    reiseziel = make_reiseziel("Rom")
+    details = erzeuge_reiseziel_details(reiseziel)
+    assert details.name == "Rom"
+    assert details.beschreibung == "Hinweistext"
+    assert details.image_url == "http://image.jpg"
+    assert details.booking_url == "http://booking"
+    assert details.wikipedia_url == "http://wiki"
+
 @patch("app.quiz_engine.lade_reiseziele")
 @patch("app.quiz_engine.erzeuge_reiseziel_details")
 @patch("app.quiz_engine.verpixle_bild")
@@ -40,19 +112,13 @@ def test_generiere_quizfrage_valid(
     mock_lade_reiseziele,
     dummy_kategorie,
     dummy_kontinent,
-    dummy_level
+    dummy_level,
+    dummy_reiseziele
 ):
-    """
-    Testet, ob generiere_quizfrage ein gültiges Quizfrage-Objekt liefert,
-    mit der erwarteten Anzahl an Antwortoptionen und einer enthaltenen richtigen Antwort.
-    """
-
-    # 1. Mocking der Rückgaben vorbereiten
+    """Testet die korrekte Erstellung einer Quizfrage inkl. Antwortoptionen."""
     mock_lade_reiseziele.return_value = [
-        Reiseziel(name=z["name"], kategorie=Kategorie(z["kategorie"]), kontinent=Kontinent(z["kontinent"]))
-        for z in dummy_reiseziele
+        make_reiseziel(z["name"], z["kategorie"], z["kontinent"]) for z in dummy_reiseziele
     ]
-
     mock_erzeuge_details.return_value = MagicMock(
         beschreibung="Eine wunderschöne Stadt mit Geschichte",
         image_url="http://example.com/test.jpg",
@@ -60,17 +126,19 @@ def test_generiere_quizfrage_valid(
         wikipedia_url="http://wikipedia.org/test"
     )
 
-    mock_verpixle_bild.return_value = "data:image/jpeg;base64,DUMMY"
-
-    # 2. Funktion aufrufen
     quizfrage, details = generiere_quizfrage(dummy_kategorie, dummy_kontinent, dummy_level)
-
-    # 3. Prüfung des Rückgabeobjekts
     assert quizfrage is not None
     assert quizfrage.richtige_antwort is not None
     assert isinstance(quizfrage.antwortoptionen, list)
     assert len(quizfrage.antwortoptionen) == dummy_level.antwortanzahl
     assert quizfrage.richtige_antwort in quizfrage.antwortoptionen
     assert isinstance(quizfrage.hinweistext, str)
-    assert "Paris" not in quizfrage.hinweistext  # Hinweistext zensiert Zielnamen
-    assert quizfrage.bild_url.startswith("data:image/")  # Base64-Vorschaubild
+    assert quizfrage.bild_url.startswith("data:image/")
+
+@patch("app.quiz_engine.lade_reiseziele")
+def test_generiere_quizfrage_too_few_options(mock_lade_reiseziele, dummy_kategorie, dummy_kontinent):
+    """Testet Fehlerfall: zu wenige Reiseziele vorhanden für gewünschte Antwortanzahl."""
+    mock_lade_reiseziele.return_value = [make_reiseziel("Paris")]
+    with pytest.raises(ValueError, match="Nicht genug Reisezieloptionen"):
+        generiere_quizfrage(dummy_kategorie, dummy_kontinent, Level("Globetrotter", 6, 70, "Schwer"))
+

@@ -1,0 +1,17 @@
+<!-- tests/templates/quiz.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head><title>Quizfrage</title></head>
+<body>
+  <p>{{ frage.hinweistext }}</p>
+  <img src="{{ frage.bild_url }}" alt="Quizbild"><br>
+
+  <form method="post" action="/result">
+    {% for option in frage.antwortoptionen %}
+      <input type="radio" name="selected_answer" value="{{ option.name }}">
+      {{ option.name }}<br>
+    {% endfor %}
+    <button type="submit">Antwort prüfen</button>
+  </form>
+</body>
+</html>

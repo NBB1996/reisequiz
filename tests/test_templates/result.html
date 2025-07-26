@@ -1,0 +1,16 @@
+<!-- tests/templates/result.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head><title>Ergebnis</title></head>
+<body>
+  <h2>Antwort: {{ 'Richtig' if korrekt else 'Falsch' }}</h2>
+
+  <h3>{{ reiseziel_name }}</h3>
+  <p>{{ reiseziel_beschreibung }}</p>
+
+  <img src="{{ bild_url }}" alt="Bild zum Reiseziel"><br>
+
+  <a href="{{ booking_link }}">Zur Buchung (Booking.com)</a><br>
+  <a href="{{ wikipedia_link }}">Mehr erfahren (Wikipedia)</a>
+</body>
+</html>

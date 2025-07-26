@@ -1,23 +1,48 @@
 from urllib.parse import urlencode, quote_plus, quote
+from typing import Optional, Mapping
 from app.models.reiseziel import Reiseziel
+
 class LinkGenerator:
     """
     Erzeugt dynamische Deeplinks zu Booking.com basierend auf einem Reiseziel.
+    Basis-URL und Default-Parameter sind als Klassenattribute definiert
+    und können zur Laufzeit oder in Subklassen überschrieben werden,
+    ohne den Methodenkörper anzupassen (OCP-konform).
     """
-    @staticmethod
-    def booking_deeplink(reiseziel: Reiseziel) -> str:
+    # Kann per ENV, Config oder in einer Subklasse angepasst werden
+    BOOKING_BASE_URL: str = "https://www.booking.com/searchresults.html"
+    # Hier lassen sich sinnvolle Default-Parameter (z.B. Sprache, Währung) vorgeben
+    BOOKING_DEFAULT_PARAMS: Mapping[str, str] = {}
+
+    @classmethod
+    def booking_deeplink(
+        cls,
+        reiseziel: Reiseziel,
+        *,
+        extra_params: Optional[Mapping[str, str]] = None
+    ) -> str:
         """
         Generiert einen Deeplink zur Booking.com-Suche für das angegebene Reiseziel.
+        
         Args:
             reiseziel (Reiseziel): Das Reiseziel, für das ein Buchungslink erzeugt werden soll.
+            extra_params (optional): Beliebige zusätzliche Query-Parameter
+                                      (z.B. {'aid': '123456'} für Affiliate-Links).
+        
         Returns:
             str: Vollständige Booking.com-Such-URL.
         """
-        base_url = "https://www.booking.com/searchresults.html"
-        params = {"ss": reiseziel.name}
+        # 1) Starte mit den Default-Parametern (kann leer sein)
+        params = dict(cls.BOOKING_DEFAULT_PARAMS)
+        # 2) Füge das Reiseziel hinzu
+        params["ss"] = reiseziel.name
+        # 3) Mische alle zusätzlichen Parameter ein
+        if extra_params:
+            params.update(extra_params)
+
+        # Baue die Query-String und die komplette URL
         query_string = urlencode(params, quote_via=quote_plus)
-        
-        return f"{base_url}?{query_string}"
+        return f"{cls.BOOKING_BASE_URL}?{query_string}"
     
     @staticmethod
     def wikipedia_link_generator(reiseziel: Reiseziel) -> str:

@@ -1,0 +1,25 @@
+<!-- tests/templates/settings.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head><title>Einstellungen</title></head>
+<body>
+  <form method="post" action="/quiz">
+    <label>Kategorie:</label>
+    <select name="kategorie">
+      <option value="Stadt">Stadt</option>
+    </select><br>
+    
+    <label>Kontinent:</label>
+    <select name="kontinent">
+      <option value="Europa">Europa</option>
+    </select><br>
+    
+    <label>Level:</label>
+    <select name="level">
+      <option value="Test">Test</option>
+    </select><br>
+    
+    <button type="submit">Quiz starten</button>
+  </form>
+</body>
+</html>
