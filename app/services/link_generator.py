@@ -11,7 +11,7 @@ class LinkGenerator:
     """
     # Kann per ENV, Config oder in einer Subklasse angepasst werden
     BOOKING_BASE_URL: str = "https://www.booking.com/searchresults.html"
-    # Hier lassen sich sinnvolle Default-Parameter (z.B. Sprache, Währung) vorgeben
+    # Hier lassen sich sinnvolle Default-Parameter (z.B. Sprache, Währung, Affiliate ID) vorgeben
     BOOKING_DEFAULT_PARAMS: Mapping[str, str] = {}
 
     @classmethod
@@ -23,12 +23,9 @@ class LinkGenerator:
     ) -> str:
         """
         Generiert einen Deeplink zur Booking.com-Suche für das angegebene Reiseziel.
-        
         Args:
             reiseziel (Reiseziel): Das Reiseziel, für das ein Buchungslink erzeugt werden soll.
-            extra_params (optional): Beliebige zusätzliche Query-Parameter
-                                      (z.B. {'aid': '123456'} für Affiliate-Links).
-        
+            extra_params (optional): Beliebige zusätzliche Query-Parameter (z.B. {'aid': '123456'} für Affiliate-Links).
         Returns:
             str: Vollständige Booking.com-Such-URL.
         """
@@ -44,14 +41,32 @@ class LinkGenerator:
         query_string = urlencode(params, quote_via=quote_plus)
         return f"{cls.BOOKING_BASE_URL}?{query_string}"
     
-    @staticmethod
-    def wikipedia_link_generator(reiseziel: Reiseziel) -> str:
+    # Basis-URL mit Platzhalter für die Sprache
+    WIKI_BASE_URL: str = "https://{lang}.wikipedia.org/wiki"
+    # Standard-Sprache, kann in Subklasse oder zur Laufzeit überschrieben werden
+    WIKI_DEFAULT_LANG: str = "de"
+    
+    @classmethod
+    def wikipedia_link_generator(
+        cls,
+        reiseziel: Reiseziel,
+        *,
+        lang: Optional[str] = None
+    ) -> str:
         """
-        Generiert einen Link zur deutschsprachigen Wikipedia-Seite des Reiseziels.
+        Generiert einen Link zur Wikipedia-Seite des Reiseziels. 
         Args:
             reiseziel (Reiseziel): Zielort.
+            lang (optional): Sprachcode (z.B. 'de', 'en'). 
+        Default: 
+            cls.WIKI_DEFAULT_LANG.
         Returns:
             str: URL zur Wikipedia-Seite.
         """
-        name_encoded = quote(reiseziel.name)
-        return f"https://de.wikipedia.org/wiki/{name_encoded}"
+        # Wähle die Sprache: Parameter oder Klassen-Default
+        language = lang or cls.WIKI_DEFAULT_LANG
+        # Kodierung des Seitentitels
+        name_encoded = quote(reiseziel.name.replace(" ", "_"))
+        # Ersetze den Platzhalter in der Basis-URL
+        base = cls.WIKI_BASE_URL.format(lang=language)
+        return f"{base}/{name_encoded}"

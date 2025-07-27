@@ -63,7 +63,6 @@ def test_quiz_route_valid(mock_kategorie, mock_kontinent, mock_level, mock_gener
         "kontinent": "Europa",
         "level": "Test"
     }, follow_redirects=True)
-
     assert response.status_code == 200
     assert b"Hinweistext" in response.data
     assert b"img_url" in response.data
@@ -84,9 +83,65 @@ def test_result_view(mock_lade, client, app):
                 "bild_url": "img.jpg"
             }
         }
-
     response = client.post("/result", data={"selected_answer": "Rom"})
     assert response.status_code == 200
     assert b"Rom" in response.data
     assert b"Beschreibung" in response.data
     assert b"booking.com" in response.data
+
+# Ungültige Quiz Einstellung testen
+def test_quiz_invalid_settings_redirect(client):
+    response = client.post("/quiz", data={
+        "kategorie": "Ungültig",
+        "kontinent": "Ungültig",
+        "level": "Ungültig"
+    }, follow_redirects=True)
+    assert "Ungültige Einstellungen" in response.get_data(as_text=True)
+
+# Keine aktvie Quizrunde auf der Ergebnisssteite gefunden
+def test_result_no_quiz_in_session(client):
+    response = client.post("/result", data={"selected_answer": "Rom"}, follow_redirects=True)
+    assert b"Keine aktive Quizrunde gefunden" in response.data
+
+# Reiseziel nicht gefunden
+@patch("app.routes.lade_reiseziele", return_value=[])
+def test_result_richtige_antwort_nicht_gefunden(mock_lade, client):
+    with client.session_transaction() as sess:
+        sess["quiz_config"] = {
+            "richtige_antwort": "Unbekanntes Ziel",
+            "details": {
+                "beschreibung": "Test",
+                "booking_link": "https://www.booking.com",
+                "wikipedia_link": "https://de.wikipedia.org/wiki/Test",
+                "bild_url": "img.jpg"
+            }
+        }
+    response = client.post("/result", data={"selected_answer": "Test"}, follow_redirects=True)
+    assert b"Reiseziel nicht gefunden" in response.data
+
+# Keine Details in Session
+@patch("app.routes.lade_reiseziele", return_value=[Reiseziel("Rom", Kontinent("Europa"), Kategorie("Stadt"))])
+def test_result_missing_details_in_session(mock_lade, client):
+    with client.session_transaction() as sess:
+        sess["quiz_config"] = {
+            "richtige_antwort": "Rom"
+            # "details" fehlt hier absichtlich
+        }
+    response = client.post("/result", data={"selected_answer": "Rom"}, follow_redirects=True)
+    assert b"Fehlende Reisedetails in der Session" in response.data
+
+# Unsichere Links, Sicherheitsprüfung schlägt fehl
+@patch("app.routes.lade_reiseziele", return_value=[Reiseziel("Rom", Kontinent("Europa"), Kategorie("Stadt"))])
+def test_result_invalid_links_replaced(mock_lade, client):
+    with client.session_transaction() as sess:
+        sess["quiz_config"] = {
+            "richtige_antwort": "Rom",
+            "details": {
+                "beschreibung": "Beschreibung",
+                "booking_link": "https://hacker.com/phishing",
+                "wikipedia_link": "https://fakepedia.org/wiki/Test",
+                "bild_url": "img.jpg"
+            }
+        }
+    response = client.post("/result", data={"selected_answer": "Rom"})
+    assert b'href="#"' in response.data

@@ -1,6 +1,7 @@
 import requests
 import bleach
 from urllib.parse import quote, urlparse
+from typing import Optional, Mapping
 from app.models.reiseziel import Reiseziel
 
 class APIService:
@@ -8,70 +9,94 @@ class APIService:
     Liefert Daten über Wikipedia APIs für Quiz-Hinweise, Bilder und Links.
     """
 
-    # Zentral definierter User-Agent für alle Wikimedia-Anfragen
-    HEADERS = {
+    # Konfigurierbare Klassenattribute
+    HEADERS: Mapping[str, str] = {
         "User-Agent": "ReisequizApp/1.0 (kontakt@mein-reisequiz.de)"
     }
 
-    @staticmethod
-    def get_standard_headers():
-        """
-        Gibt den standardmäßigen Header zurück, z.B. für andere Module wie Bildverarbeitung.
-        """
-        return APIService.HEADERS
+    # Endpoint-Templates mit Platzhalter für Sprache und Titel
+    SUMMARY_ENDPOINT: str = "https://{lang}.wikipedia.org/api/rest_v1/page/summary/{title}"
+    IMAGE_ENDPOINT:   str = "https://{lang}.wikipedia.org/api/rest_v1/page/summary/{title}"
+    # Default-Sprachen für Text und Bild
+    SUMMARY_DEFAULT_LANG: str = "de"
+    IMAGE_DEFAULT_LANG:   str = "en"
+    # URL für das Platzhalterbild
+    PLACEHOLDER_IMAGE_URL: str = "/static/platzhalter.jpg"
 
-    @staticmethod
-    def hole_hinweistext(reiseziel: Reiseziel) -> str:
+    @classmethod
+    def get_standard_headers(cls) -> Mapping[str, str]:
+        """Gibt den standardmäßigen Header zurück (kann zur Laufzeit angepasst werden)."""
+        return cls.HEADERS
+
+    @classmethod
+    def hole_hinweistext(
+        cls,
+        reiseziel: Reiseziel,
+        *,
+        lang: Optional[str] = None
+    ) -> str:
         """
-        Holt einen Kurztext aus der deutschen Wikipedia als Beschreibung.
+        Holt einen Kurztext aus der Wikipedia als Beschreibung.
         Args:
-            reiseziel (Reiseziel): Das Ziel, zu dem der Hinweistext geladen werden soll.
+            reiseziel: Zielort.
+            lang: Sprachcode (z.B. 'de', 'en'). 
+        Default: 
+            SUMMARY_DEFAULT_LANG.
         Returns:
-            str: Extrakt aus der Wikipedia-Zusammenfassung oder ein Fallback-Text.
+            Extrakt aus der Wikipedia-Zusammenfassung oder Fallback-Text.
         """
-        url = f"https://de.wikipedia.org/api/rest_v1/page/summary/{quote(reiseziel.name)}"
+        language = lang or cls.SUMMARY_DEFAULT_LANG
+        title = quote(reiseziel.name.replace(" ", "_"))
+        url = cls.SUMMARY_ENDPOINT.format(lang=language, title=title)
+
         try:
-            response = requests.get(url, headers=APIService.HEADERS, timeout=5)
-            if response.status_code == 200:
-                # raw/clean als Sicherheitsmaßnahme um nur reinen Text zurück zu geben. 
-                raw = response.json().get("extract", "")
+            resp = requests.get(url, headers=cls.HEADERS, timeout=5)
+            if resp.status_code == 200:
+                raw = resp.json().get("extract", "")
                 clean = bleach.clean(raw, tags=[], strip=True)
                 return clean or "Hinweis nicht verfügbar."
         except requests.RequestException as e:
             print(f"[Fehler beim Hinweistext für {reiseziel.name}]: {e}")
         return "Hinweis nicht verfügbar."
 
-    @staticmethod
-    def hole_bild_url(reiseziel: Reiseziel) -> str:
+    @classmethod
+    def hole_bild_url(
+        cls,
+        reiseziel: Reiseziel,
+        *,
+        lang: Optional[str] = None
+    ) -> str:
         """
-        Holt ein Vorschaubild aus der englischen Wikipedia (bessere Bildverfügbarkeit).
+        Holt ein Vorschaubild aus der Wikipedia.
         Args:
-            reiseziel (Reiseziel): Das Ziel, zu dem ein Bild geladen werden soll.
+            reiseziel: Zielort.
+            lang: Sprachcode (z.B. 'de', 'en').
+        Default: 
+            IMAGE_DEFAULT_LANG.
         Returns:
-            str: URL eines Wikipedia-Bilds oder eines Platzhalterbilds.
+            URL eines Wikipedia-Bilds oder eines Platzhalterbilds.
         """
-        titel = reiseziel.name.replace(" ", "_")
-        url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{quote(titel)}"
+        language = lang or cls.IMAGE_DEFAULT_LANG
+        title = quote(reiseziel.name.replace(" ", "_"))
+        url = cls.IMAGE_ENDPOINT.format(lang=language, title=title)
 
         try:
-            response = requests.get(url, headers=APIService.HEADERS, timeout=5)
-            if response.status_code == 200:
-                thumb = response.json().get("thumbnail", {})
+            resp = requests.get(url, headers=cls.HEADERS, timeout=5)
+            if resp.status_code == 200:
+                thumb = resp.json().get("thumbnail", {})
                 src = thumb.get("source", "")
-                # URL validieren: nur http(s)-Schema zulassen
                 parsed = urlparse(src)
                 if parsed.scheme in ("http", "https"):
                     return src
         except requests.RequestException as e:
             print(f"[Fehler Bildabruf {reiseziel.name}]: {e}")
-        return APIService.placeholder_bild()
 
-    @staticmethod
-    def placeholder_bild() -> str:
+        # Fallback auf konfiguriertes Platzhalterbild
+        return cls.PLACEHOLDER_IMAGE_URL
+
+    @classmethod
+    def placeholder_bild(cls) -> str:
         """
         Gibt die URL eines Standard-Platzhalterbilds zurück.
-        Returns:
-            str: Platzhalterbild-URL.
         """
-        return "/static/platzhalter.jpg"
-
+        return cls.PLACEHOLDER_IMAGE_URL

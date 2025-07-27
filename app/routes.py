@@ -108,19 +108,17 @@ def result():
     
     # Sicherheitsprüfung, dass nur korrekte Booking, Wikipedia Links verwendet werden
     booking = details_data["booking_link"]
-    wiki   = details_data["wikipedia_link"]
+    wiki = details_data["wikipedia_link"]
 
-    if not is_allowed_link(booking):
-        booking = "#"
-    if not is_allowed_link(wiki):
-        wiki = "#"
+    safe_booking = booking if is_allowed_link(booking) else "#"
+    safe_wiki = wiki if is_allowed_link(wiki) else "#"
 
     reiseziel_details = ReisezielDetails(
         name=richtige_antwort.name,
         beschreibung=details_data["beschreibung"],
         image_url=details_data["bild_url"],
-        booking_url=details_data["booking_link"],
-        wikipedia_url=details_data["wikipedia_link"]
+        booking_url=safe_booking,
+        wikipedia_url=safe_wiki
     )
 
     # 6. Ergebnis anzeigen mit Reisedetails und Links für weitere Details, Booking Buchungslink
