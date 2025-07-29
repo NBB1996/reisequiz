@@ -26,19 +26,19 @@ def app():
 def client(app):
     return app.test_client()
 
-# Funktionstest für Sicherheit
+# Funktionstest für Sicherheit (U09)
 def test_is_allowed_link():
     assert is_allowed_link("https://de.wikipedia.org/wiki/Berlin") is True
     assert is_allowed_link("https://www.booking.com/hotel") is True
     assert is_allowed_link("https://malicious-site.com") is False
 
-# Test der Startseite
+# Test der Startseite (I01)
 def test_index_page(client):
     response = client.get("/")
     assert response.status_code == 200
     assert b"Reisequiz" in response.data 
 
-# Test der Einstellungs-Seite
+# Test der Einstellungs-Seite (I02)
 @patch("app.models.kategorie.Kategorie.get_all", return_value=[Kategorie("Stadt")])
 @patch("app.models.kontinent.Kontinent.get_all", return_value=[Kontinent("Europa")])
 @patch("app.models.level.Level.get_all", return_value=[Level("Test", 2, 10, "Testlevel")])
@@ -48,7 +48,7 @@ def test_settings_page(mock_level, mock_kontinent, mock_kategorie, client):
     assert b"Stadt" in response.data
     assert b"Europa" in response.data
 
-# Test Quiz starten
+# Test Quiz starten (I03)
 @patch("app.routes.generiere_quizfrage")
 @patch("app.models.level.Level.get_by_name", return_value=Level("Test", 2, 10, "Test"))
 @patch("app.models.kontinent.Kontinent.get_by_name", return_value=Kontinent("Europa"))
@@ -67,7 +67,7 @@ def test_quiz_route_valid(mock_kategorie, mock_kontinent, mock_level, mock_gener
     assert b"Hinweistext" in response.data
     assert b"img_url" in response.data
 
-# Test Ergebnis anzeigen
+# Test Ergebnis anzeigen (I04)
 @patch("app.routes.lade_reiseziele", return_value=[Reiseziel("Rom", Kontinent("Europa"), Kategorie("Stadt"))])
 def test_result_view(mock_lade, client, app):
     with client.session_transaction() as sess:
@@ -89,7 +89,7 @@ def test_result_view(mock_lade, client, app):
     assert b"Beschreibung" in response.data
     assert b"booking.com" in response.data
 
-# Ungültige Quiz Einstellung testen
+# Ungültige Quiz Einstellung testen (I05)
 def test_quiz_invalid_settings_redirect(client):
     response = client.post("/quiz", data={
         "kategorie": "Ungültig",
@@ -98,12 +98,12 @@ def test_quiz_invalid_settings_redirect(client):
     }, follow_redirects=True)
     assert "Ungültige Einstellungen" in response.get_data(as_text=True)
 
-# Keine aktvie Quizrunde auf der Ergebnisssteite gefunden
+# Keine aktvie Quizrunde auf der Ergebnisssteite gefunden (I06)
 def test_result_no_quiz_in_session(client):
     response = client.post("/result", data={"selected_answer": "Rom"}, follow_redirects=True)
     assert b"Keine aktive Quizrunde gefunden" in response.data
 
-# Reiseziel nicht gefunden
+# Reiseziel nicht gefunden (I07)
 @patch("app.routes.lade_reiseziele", return_value=[])
 def test_result_richtige_antwort_nicht_gefunden(mock_lade, client):
     with client.session_transaction() as sess:
@@ -119,7 +119,7 @@ def test_result_richtige_antwort_nicht_gefunden(mock_lade, client):
     response = client.post("/result", data={"selected_answer": "Test"}, follow_redirects=True)
     assert b"Reiseziel nicht gefunden" in response.data
 
-# Keine Details in Session
+# Keine Details in Session (I08)
 @patch("app.routes.lade_reiseziele", return_value=[Reiseziel("Rom", Kontinent("Europa"), Kategorie("Stadt"))])
 def test_result_missing_details_in_session(mock_lade, client):
     with client.session_transaction() as sess:
@@ -130,7 +130,7 @@ def test_result_missing_details_in_session(mock_lade, client):
     response = client.post("/result", data={"selected_answer": "Rom"}, follow_redirects=True)
     assert b"Fehlende Reisedetails in der Session" in response.data
 
-# Unsichere Links, Sicherheitsprüfung schlägt fehl
+# Unsichere Links, Sicherheitsprüfung schlägt fehl (I09)
 @patch("app.routes.lade_reiseziele", return_value=[Reiseziel("Rom", Kontinent("Europa"), Kategorie("Stadt"))])
 def test_result_invalid_links_replaced(mock_lade, client):
     with client.session_transaction() as sess:

@@ -42,7 +42,7 @@ def dummy_reiseziele():
 def make_reiseziel(name, kategorie="Stadt", kontinent="Europa"):
     return Reiseziel(name=name, kategorie=Kategorie(kategorie), kontinent=Kontinent(kontinent))
 
-# Unit Tests
+# Testen Reiseziel laden (U01)
 @patch("builtins.open", new_callable=MagicMock)
 @patch("json.load")
 def test_lade_reiseziele(mock_json_load, mock_open):
@@ -54,12 +54,14 @@ def test_lade_reiseziele(mock_json_load, mock_open):
     assert len(result) == 1
     assert result[0].name == "Paris"
 
+# Testen Zensur Reisezielname (U02)
 def test_zensiere_reiseziel_name():
     """Testet, ob ein Reisezielname korrekt durch '__' ersetzt wird."""
     text = "Paris ist eine wunderschöne Stadt. Ich liebe Paris."
     erwartet = "__ ist eine wunderschöne Stadt. Ich liebe __."
     assert zensiere_reiseziel_name(text, "Paris") == erwartet
-    
+
+# Testen Bild Verpixeln (U03)
 @patch("app.quiz_engine.requests.get")
 @patch("app.quiz_engine.Image.open")
 def test_verpixle_bild_success(mock_image_open, mock_requests_get, dummy_level: Level):
@@ -77,18 +79,21 @@ def test_verpixle_bild_success(mock_image_open, mock_requests_get, dummy_level: 
     result = verpixle_bild("http://example.com/test.jpg", dummy_level)
     assert result.startswith("data:image/jpeg;base64,"), "Base64-Bild nicht korrekt generiert"
 
+# Testen Fehlerhafte Bild URL (U04)
 @patch("app.quiz_engine.requests.get", side_effect=Exception("404 Not Found"))
 def test_verpixle_bild_fail(mock_get):
     """Testet das Verhalten bei fehlerhafter Bild-URL (Fallback auf Original)."""
     result = verpixle_bild("http://broken-url.jpg", Level("Test", 2, 10, "Desc"))
     assert result == "http://broken-url.jpg"
 
+# Testen Ungültiger Verpixelungswert (U05)
 def test_verpixle_bild_invalid_verpixelung():
     """Testet die Behandlung eines ungültigen Verpixelungswertes (z. B. 0 oder negativ)."""
     level = Level(name="Fehlerhaft", antwortanzahl=2, verpixelung=0, beschreibung="Ungültig")
     result = verpixle_bild("http://invalid-url.jpg", level)
     assert result == "http://invalid-url.jpg"
 
+# Testen API Reiseziel Details erzeugen (U06)
 @patch("app.quiz_engine.APIService.hole_hinweistext", return_value="Hinweistext")
 @patch("app.quiz_engine.APIService.hole_bild_url", return_value="http://image.jpg")
 @patch("app.quiz_engine.LinkGenerator.booking_deeplink", return_value="http://booking")
@@ -103,6 +108,7 @@ def test_erzeuge_reiseziel_details(mock_wiki, mock_booking, mock_bild, mock_text
     assert details.booking_url == "http://booking"
     assert details.wikipedia_url == "http://wiki"
 
+# Testen Generieren einer Quizfrage (U07)
 @patch("app.quiz_engine.lade_reiseziele")
 @patch("app.quiz_engine.erzeuge_reiseziel_details")
 @patch("app.quiz_engine.verpixle_bild")
@@ -135,6 +141,7 @@ def test_generiere_quizfrage_valid(
     assert isinstance(quizfrage.hinweistext, str)
     assert quizfrage.bild_url.startswith("data:image/")
 
+# Testen von Quizfragen mit zu wenigen Antwortoptionen (U08)
 @patch("app.quiz_engine.lade_reiseziele")
 def test_generiere_quizfrage_too_few_options(mock_lade_reiseziele, dummy_kategorie, dummy_kontinent):
     """Testet Fehlerfall: zu wenige Reiseziele vorhanden für gewünschte Antwortanzahl."""
