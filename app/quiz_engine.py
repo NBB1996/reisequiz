@@ -145,7 +145,11 @@ def generiere_quizfrage(kategorie, kontinent, level):
     # 3. Hinweise abrufen (Hinweistext & Bild)
     details = erzeuge_reiseziel_details(richtige_antwort)
     hinweistext = zensiere_reiseziel_name(details.beschreibung, richtige_antwort.name)
-    bild_verpixelt = verpixle_bild(details.image_url, level)
+    # Wenn das Bild ein Platzhalter ist (lokaler statischer Pfad), dann nicht verpixeln
+    if details.image_url.startswith("/static/") or "platzhalter" in details.image_url:
+        bild_verpixelt = details.image_url
+    else:
+        bild_verpixelt = verpixle_bild(details.image_url, level)
 
     # 4. Quizfrage erzeugen
     return Quizfrage(
