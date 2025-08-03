@@ -1,181 +1,6 @@
 [
   {
-    "name": "Manchester",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Konstantinopel",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Edinburgh",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Košice",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Bern",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Castelló de la Plana",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Martin",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Vilnius",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Toledo",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Badajoz",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Bergen",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Palma",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Modena",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Międzyrzecz",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Choszczno",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Ávila",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Golczewo",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Baborów",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Małogoszcz",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
     "name": "London",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Belgrad",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Mittel Langenöls",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Palos de la Frontera",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Bolimów",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Kartuzy",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Myślibórz",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Segovia",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Warschau",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Alicante",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Mailand",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Nowy Dwór Gdański",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Kędzierzyn-Koźle",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Tychy",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Kępno",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Ostrzeszów",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Jabłonowo Pomorskie",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
@@ -185,52 +10,27 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Krapkowice",
+    "name": "Bern",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
   {
-    "name": "Mława",
+    "name": "Gdynia",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
   {
-    "name": "Stettin",
+    "name": "Modena",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
   {
-    "name": "Łódź",
+    "name": "Warschau",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
   {
-    "name": "Miranda de Ebro",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Vila-real",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Karpacz",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Skępe",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Błonie",
-    "kategorie": "Stadt",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Skierniewice",
+    "name": "Vilnius",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
@@ -245,12 +45,937 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Radzymin",
+    "name": "Belgrad",
     "kategorie": "Stadt",
     "kontinent": "Europa"
   },
   {
-    "name": "Kosovo",
+    "name": "Edirne",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Stettin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Mailand",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Toledo",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Manchester",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Derby",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Alicante",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Świętochłowice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bydgoszcz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Thorn",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Edinburgh",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Košice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Akureyri",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Palma",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Tychy",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bergen",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Konstantinopel",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Miranda de Ebro",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Castelló de la Plana",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Badajoz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Lublin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Lorca",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Segovia",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Ávila",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łódź",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Tirano",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pińczów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Opatów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Oslo",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Ząbkowice Śląskie",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Brzesko",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Polkowice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Sępólno Krajeńskie",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Staszów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Martin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Den Haag",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Miechów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kłobuck",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łask",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Poddębice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wieruszów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Plasencia",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Warka",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kargowa",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Jedwabne",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Amsterdam",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żnin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Dąbrowa Tarnowska",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pyrzyce",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Katowice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Aleksandrów Kujawski",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kłodzko",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Krynki",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Golub-Dobrzyń",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Myślenice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Tudela",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Lwówek Śląski",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Chełm",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Rzeszów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Szczekociny",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Płoty",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kikinda",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Skawina",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Requena",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wadowice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Nowy Sącz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Celje",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Mogilno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pajęczno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Suwałki",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łabiszyn",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łapy",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łazy",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łeba",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łobżenica",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łochów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Koper",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Koźle",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Los Llanos de Aridane",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Trzebiatów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bytów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kranj",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Mosina",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Tuchola",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Drawsko Pomorskie",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Swarzędz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pobiedziska",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Preveza",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Jędrzejów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Águilas",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Çorlu",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Benidorm",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Grójec",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żabno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łomża",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Zülz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żarów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żelechów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Hondarribia",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "San Lorenzo de El Escorial",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żywiec",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Miastko",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Busko-Zdrój",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Szamotuły",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Gniezno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Złocieniec",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Złoczew",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Rypin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Czechowice-Dziedzice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Lewin Brzeski",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żerków",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Rychwał",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Krynica-Zdrój",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Murowana Goślina",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kórnik",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Eibar",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Frombork",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żmigród",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żory",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wyśmierzyce",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Santa Cruz de La Palma",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Toljatti",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wieliczka",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Chodzież",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Czempiń",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Sieniawa",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Inowrocław",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Gołańcz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Białystok",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Ibiza",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Dobrzyca",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Gibraltar",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Grodzisk Wielkopolski",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Jarocin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pacanów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Sulechów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Węgliniec",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Gollnow",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Herceg Novi",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Leszno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Jastrowie",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kalisz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Dębno",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Ropczyce",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Grabów nad Prosną",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łobez",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Dukla",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Żychlin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Biecz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Ostrołęka",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Świdnica",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Świebodzin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Nowy Tomyśl",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Pniewy",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Como",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Osieczna",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Mszczonów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Aranjuez",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Rawicz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wronki",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Rzgów",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Koluszki",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Biskupiec",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Opalenica",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "El Puerto de Santa María",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bisztynek",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bobolice",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Portugalete",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Czarna Woda",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Barakaldo",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Konin",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Kostrzyn",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Bardo",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Barlinek",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Tuszyn",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Gostyń",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Barcelona",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Nidzica",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Suchowola",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Łęczna",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Wolbórz",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Świerzawa",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Niemcza",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Września",
+    "kategorie": "Stadt",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Herzogtum Steiermark",
+    "kategorie": "Region",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Balkanhalbinsel",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
@@ -265,7 +990,7 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Middle East",
+    "name": "Holland",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
@@ -295,7 +1020,17 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Holland",
+    "name": "Südeuropa",
+    "kategorie": "Region",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Zeta",
+    "kategorie": "Region",
+    "kontinent": "Europa"
+  },
+  {
+    "name": "Magna Graecia",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
@@ -330,67 +1065,22 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Balkanhalbinsel",
+    "name": "NATO-Ostflanke",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
   {
-    "name": "nördlicher Polarkreis",
+    "name": "Nordwestblock",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
   {
-    "name": "Ostseeregion",
+    "name": "Donauländer",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
   {
-    "name": "Herzogtum Steiermark",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Zeta",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Magna Graecia",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Südeuropa",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Militärverwaltungsgebiet Serbien",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Gradačac",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Mitteleuropa",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Łęczna-Włodawa-Seenplatte",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Maasländ",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Ostmitteleuropa",
+    "name": "Stato dei Presidi",
     "kategorie": "Region",
     "kontinent": "Europa"
   },
@@ -415,47 +1105,7 @@
     "kontinent": "Europa"
   },
   {
-    "name": "Europäische Niederlande",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Triveneto",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Nordwestblock",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Donauländer",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Stato dei Presidi",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "Lazistan",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
-    "name": "NATO-Ostflanke",
-    "kategorie": "Region",
-    "kontinent": "Europa"
-  },
-  {
     "name": "Singapur",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Hongkong",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -465,27 +1115,7 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Chiba",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Adıyaman",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Busan",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Mumbai",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Rafah",
+    "name": "Jerusalem",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -500,57 +1130,17 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Bangkok",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Jerusalem",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Alanya",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Taipeh",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Dubai",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Kaohsiung",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Naha",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Kuala Lumpur",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
     "name": "Abu Dhabi",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Beit Hanun",
+    "name": "Bangkok",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Gaza",
+    "name": "Bidar",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -560,67 +1150,7 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Nanjing",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Konstantinopel",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Tscheljabinsk",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Taoyuan",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Bitez",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Tokat",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Okayama",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Yalova",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Düzce",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Taichung",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Bolu",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Pjöngjang",
-    "kategorie": "Stadt",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Keelung",
+    "name": "Urganch",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -630,7 +1160,17 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Neu-Taipeh",
+    "name": "Kökschetau",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Mumbai",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Tscheljabinsk",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -645,7 +1185,57 @@
     "kontinent": "Asien"
   },
   {
+    "name": "Busan",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Hongkong",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Nanjing",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Tokat",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Naha",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
     "name": "Tubas",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Okayama",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Bolu",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Pjöngjang",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Lice",
+    "kategorie": "Stadt",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Finike",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -655,27 +1245,27 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Urganch",
+    "name": "Dubai",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Kökschetau",
+    "name": "Salfit",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Bait Lahiya",
+    "name": "Karaağaç",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Karur",
+    "name": "Kınık",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Vasco da Gama",
+    "name": "Kuala Lumpur",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
@@ -690,143 +1280,103 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Bellary",
+    "name": "Taipeh",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Bidar",
+    "name": "Chiba",
     "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Baktrien",
-    "kategorie": "Region",
+    "name": "Beit Hanun",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Israel",
-    "kategorie": "Region",
+    "name": "Taoyuan",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Südkaukasus",
-    "kategorie": "Region",
+    "name": "Gaza",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Levante",
-    "kategorie": "Region",
+    "name": "Alanya",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Autonome Region Kurdistan",
-    "kategorie": "Region",
+    "name": "Rafah",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Sonderbezirk in Tokio",
-    "kategorie": "Region",
+    "name": "Karur",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Middle East",
-    "kategorie": "Region",
+    "name": "Vasco da Gama",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Südostasien",
-    "kategorie": "Region",
+    "name": "Düzce",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Belutschistan",
-    "kategorie": "Region",
+    "name": "Ovaören",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Zentralarabien",
-    "kategorie": "Region",
+    "name": "Kaohsiung",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Festlandchina",
-    "kategorie": "Region",
+    "name": "Adıyaman",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Korea",
-    "kategorie": "Region",
+    "name": "Kannur",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Eretz Israel",
-    "kategorie": "Region",
+    "name": "Karaburna",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Palästina",
-    "kategorie": "Region",
+    "name": "Tokio",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Ostasien",
-    "kategorie": "Region",
+    "name": "Neu-Taipeh",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Staat Palästina",
-    "kategorie": "Region",
+    "name": "Taichung",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Vorderasien",
-    "kategorie": "Region",
+    "name": "Yalova",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
-    "name": "Zentralasien",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "nördlicher Polarkreis",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Qaidam-Becken",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Westjordanland",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Gazastreifen",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Nepal",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Kurdistan",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Ferner Osten",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Bergkarabach",
-    "kategorie": "Region",
+    "name": "Keelung",
+    "kategorie": "Stadt",
     "kontinent": "Asien"
   },
   {
@@ -845,7 +1395,107 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Persis",
+    "name": "Israel",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Levante",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Vorderasien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Belutschistan",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Zentralarabien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Südostasien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Korea",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Festlandchina",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Nepal",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Südkaukasus",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Eretz Israel",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Palästina",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Baktrien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Autonome Region Kurdistan",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Zentralasien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Gazastreifen",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Qaidam-Becken",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Westjordanland",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Ferner Osten",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Kurdistan",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Bergkarabach",
     "kategorie": "Region",
     "kontinent": "Asien"
   },
@@ -855,22 +1505,17 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Süd-Zentralasien",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Region am Persischen Golf",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
-    "name": "Syrien",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
     "name": "Südasien",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Persis",
+    "kategorie": "Region",
+    "kontinent": "Asien"
+  },
+  {
+    "name": "Goldener Halbmond",
     "kategorie": "Region",
     "kontinent": "Asien"
   },
@@ -880,7 +1525,7 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Goldener Halbmond",
+    "name": "Syrien",
     "kategorie": "Region",
     "kontinent": "Asien"
   },
@@ -900,22 +1545,7 @@
     "kontinent": "Asien"
   },
   {
-    "name": "Lazistan",
-    "kategorie": "Region",
-    "kontinent": "Asien"
-  },
-  {
     "name": "Accra",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Scharm asch-Schaich",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Abidjan",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
@@ -925,87 +1555,12 @@
     "kontinent": "Afrika"
   },
   {
+    "name": "Scharm asch-Schaich",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
     "name": "Port Louis",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Oshogbo",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Katsina",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Wa",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Tanta",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Onitsha",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Serowe",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Awka",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Bauchi",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Tamale",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Johannesburg",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Bloemfontein",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Luxor",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Kumasi",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Goma",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Aba",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Ho",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
@@ -1015,22 +1570,12 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Agogo",
+    "name": "Abidjan",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
   {
-    "name": "Akim Oda",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Ilorin",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Winneba",
+    "name": "Tarkwa",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
@@ -1050,6 +1595,76 @@
     "kontinent": "Afrika"
   },
   {
+    "name": "Bloemfontein",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Luxor",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Kumasi",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Johannesburg",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Katsina",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Aba",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Goma",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Onitsha",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Serowe",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Oshogbo",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Bauchi",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Agogo",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Ilorin",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Oyo",
+    "kategorie": "Stadt",
+    "kontinent": "Afrika"
+  },
+  {
     "name": "Dutse",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
@@ -1060,17 +1675,17 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Damongo",
+    "name": "Wa",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
   {
-    "name": "Tarkwa",
+    "name": "Tanta",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
   {
-    "name": "Oyo",
+    "name": "Winneba",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
@@ -1090,12 +1705,12 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Okene",
+    "name": "Agboville",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
   {
-    "name": "Agboville",
+    "name": "Burj al-Arab al-jadida",
     "kategorie": "Stadt",
     "kontinent": "Afrika"
   },
@@ -1110,27 +1725,12 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Galadima",
-    "kategorie": "Stadt",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Burj al-Arab al-jadida",
-    "kategorie": "Stadt",
+    "name": "Sudan",
+    "kategorie": "Region",
     "kontinent": "Afrika"
   },
   {
     "name": "Äquatorialafrika",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Westafrika",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Middle East",
     "kategorie": "Region",
     "kontinent": "Afrika"
   },
@@ -1145,7 +1745,7 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Sudan",
+    "name": "Westafrika",
     "kategorie": "Region",
     "kontinent": "Afrika"
   },
@@ -1155,7 +1755,17 @@
     "kontinent": "Afrika"
   },
   {
+    "name": "Nordafrika",
+    "kategorie": "Region",
+    "kontinent": "Afrika"
+  },
+  {
     "name": "Ostafrika",
+    "kategorie": "Region",
+    "kontinent": "Afrika"
+  },
+  {
+    "name": "Südliches Afrika",
     "kategorie": "Region",
     "kontinent": "Afrika"
   },
@@ -1165,12 +1775,7 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Nordafrika",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Südliches Afrika",
+    "name": "Putschgürtel",
     "kategorie": "Region",
     "kontinent": "Afrika"
   },
@@ -1190,27 +1795,7 @@
     "kontinent": "Afrika"
   },
   {
-    "name": "Großraum Mittlerer Osten",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Abessinien",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
-    "name": "Putschgürtel",
-    "kategorie": "Region",
-    "kontinent": "Afrika"
-  },
-  {
     "name": "Los Angeles",
-    "kategorie": "Stadt",
-    "kontinent": "Nord-/Mittelamerika"
-  },
-  {
-    "name": "Toronto",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
@@ -1220,12 +1805,17 @@
     "kontinent": "Nord-/Mittelamerika"
   },
   {
+    "name": "Toronto",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
     "name": "Mexiko-Stadt",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Guatemala-Stadt",
+    "name": "Markham",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
@@ -1235,7 +1825,12 @@
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Markham",
+    "name": "Guatemala-Stadt",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chapala",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
@@ -1250,12 +1845,1007 @@
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Chapala",
+    "name": "Yellowknife",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Túxpam de Rodríguez Cano",
+    "name": "Edmonton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Regina",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Fredericton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Charlottetown",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Whitehorse",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Havanna",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tijuana",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Dąbrowa Górnicza",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Belize City",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kielce",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Krymsk",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "St. Catharines",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Carrollton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Puebla",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cancún",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zacatecoluca",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Joliette",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zacatecas",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tlaquepaque",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Şuşa",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Puerto Limón",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Puntarenas",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Monterrey",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Heredia",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cartago",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Guanajay",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "San Antonio de los Baños",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Artemisa",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kemerowo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Hamilton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Lahti",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Bayamo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Manzanillo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chatham-Kent",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Plymouth",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brampton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Bauta",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Orsk",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zamora",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Abinsk",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nanaimo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Mariel",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Santiago de Cuba",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ciego de Ávila",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Wieluń",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Santiago de los Caballeros",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Vaughan",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Fort-de-France",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Camagüey",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "The Valley",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kramatorsk",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Belleville",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Thunder Bay",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brockville",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brantford",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Palo Alto",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kingston",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sarnia",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cambridge",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Newton",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Barrie",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Acapulco",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Mississauga",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Belmopan",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Švenčionys",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kulob",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Rochester",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Köneürgenç",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Saint-Marc",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Willemstad",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Burlington",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nassau",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Stamford",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Oranjestad",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Qusar",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Alajuela",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cheyenne",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Middletown",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Basseterre",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zapopan",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kingstown",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "San José",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Paramaribo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "St. George’s",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Colima",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Mazatlán",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Castries",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Colón",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Roseau",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Semeniwka",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "La Romana",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Panama-Stadt",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sochumi",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Santo Domingo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chihuahua",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tampere",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brandon",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Guanajuato",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Port of Spain",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Richmond Hill",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tajynscha",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ocosingo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Campeche",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zaqatala",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zarasai",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cuauhtémoc",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Villa Canales",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Santiago de Querétaro",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Guantánamo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zephyr Cove-Round Hill Village",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Artvin",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Moa",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chester",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cienfuegos",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ilulissat",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Şərur",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Port Antonio",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "San Cristóbal Verapaz",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "China",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Gouyave",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Viekšniai",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Windsor",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sisimiut",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Bordschomi",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Oshawa",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cananea",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Río Cauto",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Jimaguayú",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Antigua Guatemala",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Abreus",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sudbury",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brant",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Prince Edward County",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Norfolk County",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Parker",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Quetzaltenango",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Pointe-à-Pitre",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "San Antonio del Sur",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "León",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Skopin",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Jadrin",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Holguín",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Niagara Falls",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Qəbələ",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Qaanaaq",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Pinar del Río",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "David",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Hermosillo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Mérida",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ardahan",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chinantequilla",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Álamos",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Frankenmuth",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Dieppe",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Caibarién",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Beaumont",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cupertino",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "San Luis Potosí",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Upernavik",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kawartha Lakes",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chilpancingo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kitchener",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Rîbnița",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cap-Haïtien",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tepic",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Aguascalientes",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Port Maria",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Astara",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Güines",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nezahualcóyotl",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Melena del Sur",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Duscheti",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Matanzas",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Pickering",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Torreón",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Gibara",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Rafael Freyre",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Savanna-la-Mar",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Naryn",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Aasiaat",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Osurgeti",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Radviliškis",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Santa Clara",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ittoqqortoormiit",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nuevo Laredo",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Culiacán",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Achalkalaki",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Coatzacoalcos",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Guelph",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Žagarė",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Chetumal",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sault Ste. Marie",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Morant Bay",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Narsaq",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Thorold",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Orhei",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Alvarado",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Alytus",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Uruapan",
+    "kategorie": "Stadt",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kattaqoʻrgʻon",
     "kategorie": "Stadt",
     "kontinent": "Nord-/Mittelamerika"
   },
@@ -1265,37 +2855,457 @@
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "nördlicher Polarkreis",
-    "kategorie": "Region",
-    "kontinent": "Nord-/Mittelamerika"
-  },
-  {
-    "name": "Obere Halbinsel von Michigan",
-    "kategorie": "Region",
-    "kontinent": "Nord-/Mittelamerika"
-  },
-  {
     "name": "Great Plains",
     "kategorie": "Region",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "niederländische Überseegebiete in der Karibik",
+    "name": "Pazifischer Nordwesten",
     "kategorie": "Region",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Moskitoküste",
+    "name": "Gadsden-Kauf",
     "kategorie": "Region",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "Texas Hill Country",
+    "name": "Seeprovinzen",
     "kategorie": "Region",
     "kontinent": "Nord-/Mittelamerika"
   },
   {
-    "name": "São Paulo",
+    "name": "Lunenburg County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Deitscherei",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Coteau du Missouri",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kalifornien",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Acadiana",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Labrador",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nordkanada",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Research Triangle",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Zentral-Alberta",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Pantasma",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Atlantische Provinzen",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nordkalifornien",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nunavik",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Okanagan Valley",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Queens County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Quad Cities",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Prairie Pothole Region",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Tri-Cities",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Metropolregion Greater Boston",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Prärieprovinzen",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "North Slope",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Black-Hawk-Purchase",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Borscht Belt",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Yarmouth County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Guysborough County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Annapolis County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Nord-Alberta",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Florida Parishes",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Magdalenen-Inseln",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Wasatch Front",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kings County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Colchester County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Klondike Fields",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Südkalifornien",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "South Central Alaska",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Antigonish County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Big Sur",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Great Neck",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Platte Purchase",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Victoria County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Corn Belt",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Québec-Windsor-Korridor",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Fort Rock Basin",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sunshine Coast",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Georgian Triangle",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Alaska Interior",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Inner Banks",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Golden Horseshoe",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Große Seen",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cotton Belt",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Hudson Valley",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Westkanada",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Great Black Swamp",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Texas Panhandle",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Beauce",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Osttexas",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Hants County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Digby County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Pictou County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Shelburne County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Selva Lacandona",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Treasure Coast",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Golden Triangle (Mississippi)",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Buffalo Creek Reservation",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Waxhaws",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Inverness County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Noord",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Richmond County",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Bluegrass Region",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Cowichan Valley",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Jackson Purchase",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Warm Springs Indian Reservation",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Ost-Washington",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "West-Washington",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Kananaskis Country",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Peace River Country",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Sea-to-Sky Corridor",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Shuswap Country",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Süd-Alberta",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Upstate South Carolina",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Unassigned Lands",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Okanagan Country",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Northern Saskatchewan Administration District",
+    "kategorie": "Region",
+    "kontinent": "Nord-/Mittelamerika"
+  },
+  {
+    "name": "Brasília",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cuenca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Goioerê",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Vreed en Hoop",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
@@ -1310,7 +3320,17 @@
     "kontinent": "Südamerika"
   },
   {
-    "name": "Cuenca",
+    "name": "Shoshong",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pucallpa",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "São Paulo",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
@@ -1330,42 +3350,1257 @@
     "kontinent": "Südamerika"
   },
   {
-    "name": "Brasília",
+    "name": "Puente Alto",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Shoshong",
+    "name": "Hualpén",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Goioerê",
+    "name": "Colina",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Las Parejas",
+    "name": "Combarbalá",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Vreed en Hoop",
+    "name": "Coronel",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Pucallpa",
+    "name": "Chiguayante",
     "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
-    "name": "Sierras Pampeanas",
-    "kategorie": "Region",
+    "name": "Andacollo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Buin",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cañete",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huechuraba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Pedro de la Paz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Victoria",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Nogales",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Calera",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Casablanca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Concón",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Penco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Peñaflor",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Andalgalá",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Javier",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Reconquista",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Esperanza",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Jorge",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Río Tercero",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Coronel Suárez",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Gualeguaychú",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Palpalá",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Concepción del Uruguay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Comodoro Rivadavia",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Salvador de Jujuy",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Luis",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Formosa",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Bella Vista",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Paraná",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Villa Carlos Paz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lules",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ezeiza",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Concordia",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto Iguazú",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Bell Ville",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Monte Caseros",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cipolletti",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cruz del Eje",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Marcos Juárez",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Famaillá",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Banda",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ushuaia",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Rosario de Lerma",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Godoy Cruz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Ramón de la Nueva Orán",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "General Güemes",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Apóstoles",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Añatuya",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Banda del Río Salí",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Trelew",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cafayate",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Caleta Olivia",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chivilcoy",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto Madryn",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Villa Dolores",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Deán Funes",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Punta Alta",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Berisso",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Martín de los Andes",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Pedro de Jujuy",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Humahuaca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Campana",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Francisco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Villa General Belgrano",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pico Truncado",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tartagal",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Aluminé",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Libertador General San Martín",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maipú",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chilecito",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Paso de los Libres",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Grand Bourg",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Santa Clara del Mar",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Avellaneda",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Rafael",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Nicolás de los Arroyos",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tornquist",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Burzaco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Monte Grande",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tunuyán",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Bernal",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Banfield",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Temperley",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Yurimaguas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Nauta",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Caballococha",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Lorenzo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Contamana",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Bagua (Stadt)",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chachapoyas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Bagua Grande",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Quillabamba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Yauri",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sicuani",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cajamarca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Jaén",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Casma",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huarmey",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huaraz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Macusani",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ilave",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Desaguadero",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Yunguyo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Juli",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huancané",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Azángaro",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lampa",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Guadalupe",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Trujillo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Atalaya",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Las Lomas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Unión",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Merced",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Ramón",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tumán",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Abancay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chalhuanca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ayabaca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chulucanas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huancabamba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Marcona",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chiclayo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lambayeque",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Moyobamba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Juanjuí",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lamas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cerro de Pasco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Iñapari",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huánuco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ambo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pampas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lircay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Callao",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Lima",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chacas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Satipo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cusco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Jauja",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chincha Alta",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Carhuaz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tarma",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Piura",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sullana",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tarapoto",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Barranca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pomabamba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ayacucho",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Matucana",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ollantaytambo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Caraz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Recuay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Vicente de Cañete",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Urubamba",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Buenos Aires",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Iquitos",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pisco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Salaverry",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huanta",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto Maldonado",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Pedro de Lloc",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Aguas Calientes",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Andahuaylas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Yungay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sechura",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huari",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huancavelica",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puno",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Concepción",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Celendín",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sihuas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Paramonga",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Chinchero",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Paracas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Oroya",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pativilca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Mala",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Imperial (Peru)",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huanchaco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maras",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Nasca",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Moquegua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tacna",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ica",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tambogrande",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huamachuco",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pimentel",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tingo María",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Huancayo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Paita",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sabaneta",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Socopó",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Guanare",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Fernando de Apure",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Rubio",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maracaibo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Santa Rita",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "El Limón",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cagua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Turmero",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Upata",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ciudad Bolívar",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ciudad Guayana",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Los Teques",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Valencia",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tucupita",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Pedernales",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Felipe",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto Cabello",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Yaritagua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Boconó",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Valera",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Asunción",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Calabozo",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Barquisimeto",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Araure",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maturín",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maiquetía",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Charallave",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "La Guaira",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Parika",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Caracas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Mamporal",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sanare",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Santa Teresa del Tuy",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Güigüe",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Valle de la Pascua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Ocumare del Tuy",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Santa María de Ipire",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Guacara",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Diego",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Tocuyito",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Guarenas",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Naguanagua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San José de Barlovento",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "San Carlos de Río Negro",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Machiques",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "El Tigre",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto Ayacucho",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Carúpano",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Acarigua",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Puerto La Cruz",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Maracay",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cabudare",
+    "kategorie": "Stadt",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cúa",
+    "kategorie": "Stadt",
     "kontinent": "Südamerika"
   },
   {
     "name": "Dreiländereck",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Sierras Pampeanas",
     "kategorie": "Region",
     "kontinent": "Südamerika"
   },
@@ -1380,6 +4615,56 @@
     "kontinent": "Südamerika"
   },
   {
+    "name": "Chilenisches Antarktisterritorium",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Kleiner Süden",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Cuyo",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Valle de los Ríos Apurímac, Ene y Mantaro",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Vichada",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Baixada Fluminense",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Recôncavo",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Santana",
+    "kategorie": "Region",
+    "kontinent": "Südamerika"
+  },
+  {
+    "name": "Nelson",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gisborne",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
     "name": "Christchurch",
     "kategorie": "Stadt",
     "kontinent": "Australien und Ozeanien"
@@ -1390,17 +4675,7 @@
     "kontinent": "Australien und Ozeanien"
   },
   {
-    "name": "Nelson",
-    "kategorie": "Stadt",
-    "kontinent": "Australien und Ozeanien"
-  },
-  {
     "name": "Tauranga",
-    "kategorie": "Stadt",
-    "kontinent": "Australien und Ozeanien"
-  },
-  {
-    "name": "Gisborne",
     "kategorie": "Stadt",
     "kontinent": "Australien und Ozeanien"
   },
@@ -1410,8 +4685,753 @@
     "kontinent": "Australien und Ozeanien"
   },
   {
-    "name": "Hamilton",
+    "name": "Pangunamine",
     "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Majuro",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Porirua",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Queenstown",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "New Plymouth",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Rotorua",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Hastings",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Dunedin",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lower Hutt",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Napier",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Invercargill",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Norsup",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lamap",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Upper Hutt",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Port Vila",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Funafuti",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Apia",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Honiara",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Telefomin",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Aitape",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Rabaul",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mount Hagen",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kieta",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Buka",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Goroka",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Alotau",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bogia",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Tabubil",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Daru",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lae",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mendi",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Tari",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Namatanai",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kavieng",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kokopo",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lorengau",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Teaoraereke",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Koror",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "South Tarawa",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Ngerulmud",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Palikir",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lautoka",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Suva",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Papeete",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kaiser-Wilhelms-Land",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "King Country",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Fiordland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Idam (Neuguinea)",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Canberra",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Geelong",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Ballarat",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Palmerston",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mount Gambier",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kalgoorlie-Boulder",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Melbourne",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Perth",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Albury",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Adelaide",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bairnsdale",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Newcastle",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Sydney",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gold Coast",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Hobart",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Brisbane",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Broken Hill",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Burnie",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bundaberg",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Townsville",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Traralgon",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lismore",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Lithgow",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Pakenham",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Swan Hill",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Cairns",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bunbury",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Wollongong",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Launceston",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Maryborough",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Castlemaine",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Penrith",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Wagga Wagga",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bowen",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Southport",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Ipswich",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Colac",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Victor Harbor",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Port Macquarie",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Rockhampton",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bendigo",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Port Augusta",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Wodonga",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Goulburn",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Geraldton",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Coffs Harbour",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gosford",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Hervey Bay",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mount Isa",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Armidale",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Orange",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mandurah",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Wangaratta",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Grafton",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Sale",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Dubbo",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Shepparton",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Cessnock",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Queanbeyan",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mildura",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Warrnambool",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Whyalla",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gladstone",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Devonport",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Mackay",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bathurst",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Taree",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Horsham",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Ararat",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Busselton",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Portland",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Murray Bridge",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Griffith",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gold Coast City",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Frankston",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Dandenong",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Tamworth",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Liverpool Plains",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Riverland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Australasien",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Blue Mountains",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Katherine Region",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Illawarra",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Bundaberg Volcanic Province",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Pilbara",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Far North Queensland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Top End",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "New England",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Gulf Country",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Hunter Valley",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "South East Queensland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "North Queensland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Riverina",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "South West Queensland",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Wide Bay-Burnett",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Nukuʻalofa",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Popondetta",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kerema",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Kabien",
+    "kategorie": "Stadt",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Melanesien",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Polynesien",
+    "kategorie": "Region",
+    "kontinent": "Australien und Ozeanien"
+  },
+  {
+    "name": "Malaiischer Archipel",
+    "kategorie": "Region",
     "kontinent": "Australien und Ozeanien"
   }
 ]
