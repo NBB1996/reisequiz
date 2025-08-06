@@ -1,4 +1,4 @@
-Run started:2025-08-06 19:51:21.525208
+Run started:2025-08-06 20:00:07.608974
 
 Test results:
 >> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
@@ -19,16 +19,6 @@ Test results:
 149	    antwortoptionen = random.sample(gefiltert, level.antwortanzahl)
 150	    richtige_antwort = random.choice(antwortoptionen)
 151	
-
---------------------------------------------------
->> Issue: [B113:request_without_timeout] Call to requests without timeout
-   Severity: Medium   Confidence: Low
-   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
-   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
-   Location: .\app\services\reiseziel_generator.py:74:15
-73	    url = "https://query.wikidata.org/sparql"
-74	    response = requests.get(url, params={"query": sparql}, headers=HEADERS)
-75	    response.raise_for_status()
 
 --------------------------------------------------
 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
@@ -638,11 +628,11 @@ Run metrics:
 	Total issues (by severity):
 		Undefined: 0
 		Low: 62
-		Medium: 1
+		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
-		Low: 1
+		Low: 0
 		Medium: 1
 		High: 61
 Files skipped (0):

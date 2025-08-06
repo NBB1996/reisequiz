@@ -71,7 +71,7 @@ def has_valid_wikipedia_extract(title: str) -> bool:
 def run_query_and_filter(sparql: str, kategorie: str,
                          kontinent: str) -> List[Dict[str, str]]:
     url = "https://query.wikidata.org/sparql"
-    response = requests.get(url, params={"query": sparql}, headers=HEADERS)
+    response = requests.get(url, params={"query": sparql}, headers=HEADERS, timeout=10)
     response.raise_for_status()
     data = response.json()
 
