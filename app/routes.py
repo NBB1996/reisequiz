@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, flash
+from flask_wtf import FlaskForm
+from flask_wtf.csrf import CSRFProtect
 from app.quiz_engine import generiere_quizfrage,lade_reiseziele, erzeuge_reiseziel_details
 from app.models.quiz import Quiz
 from app.models.kategorie import Kategorie
@@ -8,6 +10,10 @@ from app.models.reiseziel import ReisezielDetails
 from urllib.parse import urlparse
 
 main = Blueprint('main', __name__)
+
+# DummyForm Klasse zur CSRF Aktivierung
+class DummyForm(FlaskForm):
+    pass
 
 def is_allowed_link(url: str) -> bool:
     """
@@ -28,12 +34,16 @@ def settings():
     kontinente = Kontinent.get_all()
     level_stufen = Level.get_all()
 
+    # CSRF-Formular initialisieren
+    form = DummyForm()
+
     # Übergebae der Auswahlmöglichkeiten an das Template 
     return render_template(
         'settings.html', 
         kategorien=kategorien, 
         kontinente=kontinente, 
-        level_stufen=level_stufen
+        level_stufen=level_stufen,
+        form=form
         )
 
 @main.route("/quiz", methods=["POST"])
@@ -75,7 +85,7 @@ def quiz():
     }
 
     # 7. Template anzeigen
-    return render_template("quiz.html", frage=frage, quiz_config=session["quiz_config"])
+    return render_template("quiz.html", frage=frage, quiz_config=session["quiz_config"], form=DummyForm())
 
 @main.route("/result", methods=["POST"])
 def result():

@@ -18,7 +18,7 @@
     <!-- Kopfzeile mit Titel & Neustart-Button -->
     <header class="d-flex justify-content-between align-items-center mb-4">
         <h1>
-            <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" style="vertical-align: middle; margin-right: 8px;">
+            <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" class="logo-icon">
             Reisequiz
         </h1>
         <a href="{{ url_for('main.settings') }}" class="btn btn-outline-dark">Neues Quiz</a>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <!-- Quellenhinweis -->
+        <!-- Quellenhinweis -->
     <div class="info">
         <i class="bi bi-info-circle-fill"></i> Fragen und Informationen basieren auf den Quellen:<br>
         <strong>Wikipedia</strong>

@@ -24,6 +24,7 @@
 
         <!-- Quiz-Einstellungsformular -->
         <form id="quizSettingsForm" method="POST" action="{{ url_for('main.quiz') }}">
+            {{ form.hidden_tag() }}  <!-- CSRF-Schutz aktiviert -->
             <div class="row justify-content-center">
 
                 <!-- Kategorie / Kontinent -->
@@ -44,30 +45,27 @@
                     </select>
                 </div>
 
-                <!-- Schwierigkeitslevel auswählen -->
-                <div class="col-md-5 p-3 rounded box-light">
-                    <h5><i class="bi bi-triangle-fill"></i> Schwierigkeit-Level</h5>
-                    <div class="form-check mb-2 text-start">
-                        {% for level in level_stufen %}
-                        <div class="form-check mb-2 text-start">
-                            <input class="form-check-input" type="radio" name="level" id="level{{ loop.index }}" value="{{ level.name }}" required>
-                            <label class="form-check-label" for="level{{ loop.index }}">
-                                <strong>{{ level.name }}</strong><br>
-                                <small>{{ level.beschreibung }}</small>
-                            </label>
-                        </div>
-                        {% endfor %}
-                    </div>
+            <!-- Schwierigkeitslevel auswählen -->
+            <div class="col-md-5 p-3 rounded box-light">
+                <h5><i class="bi bi-triangle-fill"></i> Schwierigkeit-Level</h5>
+                {% for level in level_stufen %}
+                <div class="form-check mb-2 text-start">
+                    <input class="form-check-input" type="radio" name="level" id="level{{ loop.index }}" value="{{ level.name }}" required>
+                    <label class="form-check-label" for="level{{ loop.index }}">
+                        <strong>{{ level.name }}</strong><br>
+                        <small>{{ level.beschreibung }}</small>
+                    </label>
                 </div>
+                {% endfor %}
             </div>
 
             <!-- Validierungsnachricht  -->
-            <div id="error-message" class="text-danger mt-3" style="display:none;">
+            <div id="error-message" class="text-danger mt-3 hidden">
                 Bitte wähle alle Felder aus, bevor du das Quiz startest.
             </div>
 
             <!-- Quiz starten Button -->
-            <button type="submit" class="btn-custom mt-4" id="startButton" disabled>Quiz starten</button>
+            <button type="submit" class="btn btn-success mt-4" id="submitBtn" disabled>Quiz starten</button>
         </form>
 
         <!-- Quellenhinweis -->
@@ -83,34 +81,7 @@
     </div>
 
     <!-- Validierungsscript  -->
-    <script>
-        // Validierung: alle Felder müssen ausgefüllt sein
-        const form = document.getElementById('quizSettingsForm');
-        const startButton = document.getElementById('startButton');
-        const errorMsg = document.getElementById('error-message');
-
-        // Prüft ob alle Felder ausgefüllt sind
-        form.addEventListener('input', () => {
-            const kategorie = form.kategorie.value;
-            const kontinent = form.kontinent.value;
-            const levelChecked = form.level.value !== "";
-
-            if (kategorie && kontinent && levelChecked) {
-                startButton.disabled = false;
-                errorMsg.style.display = 'none';
-            } else {
-                startButton.disabled = true;
-            }
-        });
-
-        // Verhindert Abschicken, wenn Button deaktiviert ist
-        form.addEventListener('submit', (e) => {
-            if (startButton.disabled) {
-                e.preventDefault();
-                errorMsg.style.display = 'block';
-            }
-        });
-    </script>
+    <script src="{{ url_for('static', filename='settings_funktion.js') }}"></script>
 
 </body>
 </html>

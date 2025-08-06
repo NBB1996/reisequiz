@@ -13,94 +13,67 @@
 
 </head>
 <body>
+    <div class="container">
 
-<div class="container">
+        <!-- Kopfbereich mit Logo und "Neues Quiz"-Button -->
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <h1>
+                <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" class="logo-icon">
+                Reisequiz
+            </h1>
+            <a href="{{ url_for('main.settings') }}" class="btn btn-outline-dark">Neues Quiz</a>
+        </header>
 
-    <!-- Kopfbereich mit Logo und "Neues Quiz"-Button -->
-    <header class="d-flex justify-content-between align-items-center mb-4">
-        <h1>
-            <img src="{{ url_for('static', filename='globe-icon.png') }}" alt="Icon" width="32" style="vertical-align: middle; margin-right: 8px;">
-            Reisequiz
-        </h1>
-        <a href="{{ url_for('main.settings') }}" class="btn btn-outline-dark">Neues Quiz</a>
-    </header>
+        <!-- Einstellungen als Mini-Übersicht -->
+        <p class="text-muted">
+            Kategorie: <strong>{{ quiz_config.kategorie }}</strong> |
+            Kontinent: <strong>{{ quiz_config.kontinent }}</strong> |
+            Level: <strong>{{ quiz_config.level }}</strong>
+        </p>
 
-    <!-- Einstellungen als Mini-Übersicht -->
-    <p class="text-muted">
-        Kategorie: <strong>{{ quiz_config.kategorie }}</strong> |
-        Kontinent: <strong>{{ quiz_config.kontinent }}</strong> |
-        Level: <strong>{{ quiz_config.level }}</strong>
-    </p>
+        <!-- Hinweisbild -->
+        <img src="{{ frage.bild_url }}" alt="Hinweisbild" class="quiz-image img-fluid rounded mb-3">
 
-    <!-- Hinweisbild -->
-    <img src="{{ frage.bild_url }}" alt="Hinweisbild" class="quiz-image img-fluid rounded mb-3">
+        <!-- Hinweistext -->
+        <div class="box-light mt-3 text-start">
+            <h5><strong>Welcher Ort wird hier beschrieben?</strong></h5>
+            <p>{{ frage.hinweistext }}</p>
+        </div>
 
-    <!-- Hinweistext -->
-    <div class="box-light mt-3 text-start">
-        <h5><strong>Welcher Ort wird hier beschrieben?</strong></h5>
-        <p>{{ frage.hinweistext }}</p>
-    </div>
-
-    <!-- Antwortmöglichkeiten -->
-    <form id="quizForm" method="POST" action="{{ url_for('main.result') }}">
-        <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
-            {% for option in frage.antwortoptionen %}
-            <div class="col">
-                <button type="button" class="answer-option btn btn-outline-primary w-100" data-value="{{ option.name }}">
-                    {{ option.name }}
-                </button>
+        <!-- Antwortmöglichkeiten -->
+        <form id="quizForm" method="POST" action="{{ url_for('main.result') }}">
+            {{ form.hidden_tag() }}  <!-- CSRF-Schutz aktiviert -->
+            <div class="row row-cols-1 row-cols-md-2 g-3 mt-3">
+                {% for option in frage.antwortoptionen %}
+                <div class="col">
+                    <button type="button" class="answer-option btn btn-outline-primary w-100" data-value="{{ option.name }}">
+                        {{ option.name }}
+                    </button>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+
+            <!-- Verstecktes Feld für Antwortübermittlung -->
+            <input type="hidden" name="selected_answer" id="selected_answer">
+
+            <!-- Abschicken -->
+            <button type="submit" class="btn btn-success mt-4" id="submitBtn" disabled>Antwort überprüfen</button>
+        </form>
+
+        <!-- Quellenhinweis -->
+        <div class="info">
+            <i class="bi bi-info-circle-fill"></i> Fragen und Informationen basieren auf den Quellen:<br>
+            <strong>Wikipedia</strong>
         </div>
 
-        <!-- Fehlermeldung -->
-        <div id="error-message" class="text-danger mt-3" style="display: none;">
-            Bitte wähle eine Antwortoption aus.
-        </div>
-
-        <!-- Verstecktes Feld für Antwortübermittlung -->
-        <input type="hidden" name="selected_answer" id="selected_answer">
-
-        <!-- Abschicken -->
-        <button type="submit" class="btn btn-success mt-4" id="submitBtn" disabled>Antwort überprüfen</button>
-    </form>
-
-    <!-- Quellenhinweis -->
-    <div class="info">
-        <i class="bi bi-info-circle-fill"></i> Fragen und Informationen basieren auf den Quellen:<br>
-        <strong>Wikipedia</strong>
+        <!-- Footer -->
+        <footer>
+            © 2025 Reisequiz Projekt - Niclas Bayer
+        </footer>
     </div>
-
-     <!-- Footer -->
-    <footer>
-        © 2025 Reisequiz Projekt - Niclas Bayer
-    </footer>
-</div>
 
 <!-- Antwortauswahl JavaScript -->
-<script>
-    const buttons = document.querySelectorAll('.answer-option');
-    const selectedAnswer = document.getElementById('selected_answer');
-    const submitBtn = document.getElementById('submitBtn');
-    const errorMsg = document.getElementById('error-message');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('selected-answer', 'btn-primary'));
-            button.classList.add('selected-answer', 'btn-primary');
-            selectedAnswer.value = button.dataset.value;
-            submitBtn.disabled = false;
-            errorMsg.style.display = 'none';
-        });
-    });
-
-    document.getElementById('quizForm').addEventListener('submit', function(e) {
-        if (!selectedAnswer.value) {
-            e.preventDefault();
-            errorMsg.style.display = 'block';
-        }
-    });
-</script>
+<script src="{{ url_for('static', filename='quiz_funktion.js') }}"></script>
 
 </body>
 </html>

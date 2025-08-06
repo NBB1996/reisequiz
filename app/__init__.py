@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_wtf import CSRFProtect
 
 def create_app():
     """
@@ -13,32 +14,29 @@ def create_app():
     # Geheimschlüssel für Sessions und CSRF-Token (zufällig bei jedem Start)
     app.secret_key = os.urandom(24) 
 
+    # CSRF-Schutz aktivieren
+    csrf = CSRFProtect(app)
+
     # Routen als Blueprint registrieren
     from .routes import main
     app.register_blueprint(main)
 
-    return app
-
     @app.after_request
     def add_security_headers(response):
-        # 1. Content-Security-Policy (CSP)
-        #    • default-src 'self'         → nur eigene Domain
-        #    • script-src 'self'          → keine externen Scripts
-        #    • style-src 'self' cdn.jsdelivr.net → Styles nur von mir und jsdelivr
-        #    • img-src 'self' data: upload.wikimedia.org → Bilder nur von mir, Data-URIs und Wikimedia
-        #    • font-src 'self' cdn.jsdelivr.net → Fonts nur von mir und jsdelivr
-        response.headers.setdefault(
-            "Content-Security-Policy",
+        response.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            "script-src 'self'; "
+            "script-src 'self' https://cdn.jsdelivr.net; "
             "style-src 'self' https://cdn.jsdelivr.net; "
             "img-src 'self' data: https://upload.wikimedia.org; "
-            "font-src 'self' https://cdn.jsdelivr.net;"
+            "font-src 'self' https://cdn.jsdelivr.net; "
+            "connect-src 'self'; "
+            "object-src 'none'; "
+            "frame-ancestors 'none'; "
+            "base-uri 'self'; "
+            "form-action 'self';"
         )
-        # 2. Verhindert MIME-Type-Sniffing (nosniff)
-        response.headers.setdefault("X-Content-Type-Options", "nosniff")
-        # 3. Verhindert Einbetten in iframes (Clickjacking)
-        response.headers.setdefault("X-Frame-Options", "DENY")
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        response.headers["X-Frame-Options"] = "DENY"
         return response
 
     return app
