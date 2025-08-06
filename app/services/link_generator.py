@@ -2,6 +2,7 @@ from urllib.parse import urlencode, quote_plus, quote
 from typing import Optional, Mapping
 from app.models.reiseziel import Reiseziel
 
+
 class LinkGenerator:
     """
     Erzeugt dynamische Deeplinks zu Booking.com basierend auf einem Reiseziel.
@@ -11,7 +12,8 @@ class LinkGenerator:
     """
     # Kann per ENV, Config oder in einer Subklasse angepasst werden
     BOOKING_BASE_URL: str = "https://www.booking.com/searchresults.html"
-    # Hier lassen sich sinnvolle Default-Parameter (z.B. Sprache, Währung, Affiliate ID) vorgeben
+    # Hier lassen sich sinnvolle Default-Parameter (z.B. Sprache, Währung,
+    # Affiliate ID) vorgeben
     BOOKING_DEFAULT_PARAMS: Mapping[str, str] = {}
 
     @classmethod
@@ -40,12 +42,13 @@ class LinkGenerator:
         # Baue die Query-String und die komplette URL
         query_string = urlencode(params, quote_via=quote_plus)
         return f"{cls.BOOKING_BASE_URL}?{query_string}"
-    
+
     # Basis-URL mit Platzhalter für die Sprache
     WIKI_BASE_URL: str = "https://{lang}.wikipedia.org/wiki"
-    # Standard-Sprache, kann in Subklasse oder zur Laufzeit überschrieben werden
+    # Standard-Sprache, kann in Subklasse oder zur Laufzeit überschrieben
+    # werden
     WIKI_DEFAULT_LANG: str = "de"
-    
+
     @classmethod
     def wikipedia_link_generator(
         cls,
@@ -54,11 +57,11 @@ class LinkGenerator:
         lang: Optional[str] = None
     ) -> str:
         """
-        Generiert einen Link zur Wikipedia-Seite des Reiseziels. 
+        Generiert einen Link zur Wikipedia-Seite des Reiseziels.
         Args:
             reiseziel (Reiseziel): Zielort.
-            lang (optional): Sprachcode (z.B. 'de', 'en'). 
-        Default: 
+            lang (optional): Sprachcode (z.B. 'de', 'en').
+        Default:
             cls.WIKI_DEFAULT_LANG.
         Returns:
             str: URL zur Wikipedia-Seite.

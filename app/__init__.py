@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_wtf import CSRFProtect
 
+
 def create_app():
     """
     Erzeugt und konfiguriert die Flask-Anwendung.
@@ -12,7 +13,7 @@ def create_app():
     app = Flask(__name__)
 
     # Geheimschlüssel für Sessions und CSRF-Token (zufällig bei jedem Start)
-    app.secret_key = os.urandom(24) 
+    app.secret_key = os.urandom(24)
 
     # CSRF-Schutz aktivieren
     csrf = CSRFProtect(app)

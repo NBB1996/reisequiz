@@ -43,6 +43,7 @@ OUTPUT_PATH = "app/static/data/reiseziel.json"
 # FUNKTIONEN
 # ===============================================
 
+
 def has_valid_wikipedia_extract(title: str) -> bool:
     url = "https://de.wikipedia.org/w/api.php"
     params = {
@@ -67,7 +68,8 @@ def has_valid_wikipedia_extract(title: str) -> bool:
     return False
 
 
-def run_query_and_filter(sparql: str, kategorie: str, kontinent: str) -> List[Dict[str, str]]:
+def run_query_and_filter(sparql: str, kategorie: str,
+                         kontinent: str) -> List[Dict[str, str]]:
     url = "https://query.wikidata.org/sparql"
     response = requests.get(url, params={"query": sparql}, headers=HEADERS)
     response.raise_for_status()
@@ -87,7 +89,12 @@ def run_query_and_filter(sparql: str, kategorie: str, kontinent: str) -> List[Di
     return reiseziele
 
 
-def query_p30(instance_id: str, continent_id: str, kategorie: str, kontinent: str, limit=200):
+def query_p30(
+        instance_id: str,
+        continent_id: str,
+        kategorie: str,
+        kontinent: str,
+        limit=200):
     sparql = f"""
     SELECT ?name ?article WHERE {{
       ?place wdt:P31 wd:{instance_id};
@@ -102,8 +109,14 @@ def query_p30(instance_id: str, continent_id: str, kategorie: str, kontinent: st
     return run_query_and_filter(sparql, kategorie, kontinent)
 
 
-def query_p131_fallback(instance_id: str, continent_id: str, kategorie: str, kontinent: str, limit=300):
-    # Region oder Stadt → ist Teil eines Landes → das Land liegt auf Kontinent X
+def query_p131_fallback(
+        instance_id: str,
+        continent_id: str,
+        kategorie: str,
+        kontinent: str,
+        limit=300):
+    # Region oder Stadt → ist Teil eines Landes → das Land liegt auf Kontinent
+    # X
     sparql = f"""
     SELECT ?name ?article WHERE {{
       ?place wdt:P31 wd:{instance_id};
@@ -119,7 +132,11 @@ def query_p131_fallback(instance_id: str, continent_id: str, kategorie: str, kon
     return run_query_and_filter(sparql, kategorie, kontinent)
 
 
-def query_ozeanien(instance_id: str, kategorie: str, kontinent: str, limit_per_country=50):
+def query_ozeanien(
+        instance_id: str,
+        kategorie: str,
+        kontinent: str,
+        limit_per_country=50):
     all_results = []
     for country_id in OZEANIEN_LAENDER:
         sparql = f"""
@@ -139,7 +156,11 @@ def query_ozeanien(instance_id: str, kategorie: str, kontinent: str, limit_per_c
     return all_results
 
 
-def query_australien(instance_id: str, kategorie: str, kontinent: str, limit=200):
+def query_australien(
+        instance_id: str,
+        kategorie: str,
+        kontinent: str,
+        limit=200):
     sparql = f"""
     SELECT ?name ?article WHERE {{
       ?place wdt:P31 wd:{instance_id};
@@ -154,12 +175,20 @@ def query_australien(instance_id: str, kategorie: str, kontinent: str, limit=200
     return run_query_and_filter(sparql, kategorie, kontinent)
 
 
-def get_kontinental_reiseziele(instanz_id: str, kontinent_id: str, kategorie: str, kontinent: str, min_zielanzahl: int):
+def get_kontinental_reiseziele(
+        instanz_id: str,
+        kontinent_id: str,
+        kategorie: str,
+        kontinent: str,
+        min_zielanzahl: int):
     print(f"Lade {kategorie} in {kontinent} ...")
     reiseziele = query_p30(instanz_id, kontinent_id, kategorie, kontinent)
     if len(reiseziele) < min_zielanzahl:
-        print(f"[INFO] Nur {len(reiseziele)} {kategorie} über P30 gefunden. Nutze Fallback P131+ ...")
-        reiseziele += query_p131_fallback(instanz_id, kontinent_id, kategorie, kontinent)
+        print(
+            f"[INFO] Nur {
+                len(reiseziele)} {kategorie} über P30 gefunden. Nutze Fallback P131+ ...")
+        reiseziele += query_p131_fallback(instanz_id,
+                                          kontinent_id, kategorie, kontinent)
     return reiseziele
 
 
@@ -175,7 +204,8 @@ def main():
         for kategorie, instanz_id in INSTANZEN.items():
             min_anzahl = MINIMALE_ANZAHL[kategorie]
             try:
-                ziele = get_kontinental_reiseziele(instanz_id, kontinent_id, kategorie, kontinent, min_anzahl)
+                ziele = get_kontinental_reiseziele(
+                    instanz_id, kontinent_id, kategorie, kontinent, min_anzahl)
                 for ziel in ziele:
                     key = f"{ziel['name']}|{ziel['kategorie']}"
                     if key not in bekannte_namen:
@@ -216,7 +246,9 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(alle_reiseziele, f, indent=2, ensure_ascii=False)
 
-    print(f"Fertig! {len(alle_reiseziele)} Reiseziele gespeichert unter '{OUTPUT_PATH}'.")
+    print(
+        f"Fertig! {
+            len(alle_reiseziele)} Reiseziele gespeichert unter '{OUTPUT_PATH}'.")
 
 
 if __name__ == "__main__":

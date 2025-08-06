@@ -1,0 +1,648 @@
+Run started:2025-08-06 19:51:21.525208
+
+Test results:
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: .\app\quiz_engine.py:149:22
+148	
+149	    antwortoptionen = random.sample(gefiltert, level.antwortanzahl)
+150	    richtige_antwort = random.choice(antwortoptionen)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random
+   Location: .\app\quiz_engine.py:150:23
+149	    antwortoptionen = random.sample(gefiltert, level.antwortanzahl)
+150	    richtige_antwort = random.choice(antwortoptionen)
+151	
+
+--------------------------------------------------
+>> Issue: [B113:request_without_timeout] Call to requests without timeout
+   Severity: Medium   Confidence: Low
+   CWE: CWE-400 (https://cwe.mitre.org/data/definitions/400.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b113_request_without_timeout.html
+   Location: .\app\services\reiseziel_generator.py:74:15
+73	    url = "https://query.wikidata.org/sparql"
+74	    response = requests.get(url, params={"query": sparql}, headers=HEADERS)
+75	    response.raise_for_status()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:26:4
+25	    result = APIService.hole_hinweistext(example_reiseziel)
+26	    assert "Berlin ist die Hauptstadt" in result
+27	    assert "<" not in result  # HTML sollte entfernt sein
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:27:4
+26	    assert "Berlin ist die Hauptstadt" in result
+27	    assert "<" not in result  # HTML sollte entfernt sein
+28	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:36:4
+35	    result = APIService.hole_hinweistext(example_reiseziel)
+36	    assert result == "Hinweis nicht verfügbar."
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:53:4
+52	    result = APIService.hole_bild_url(example_reiseziel)
+53	    assert result.startswith("https://upload.wikimedia.org")
+54	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:71:4
+70	    result = APIService.hole_bild_url(example_reiseziel)
+71	    assert result == APIService.PLACEHOLDER_IMAGE_URL
+72	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:80:4
+79	    result = APIService.hole_bild_url(example_reiseziel)
+80	    assert result == APIService.PLACEHOLDER_IMAGE_URL
+81	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_api_service.py:86:4
+85	def test_placeholder_bild():
+86	    assert APIService.placeholder_bild() == "/static/platzhalter.jpg"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:15:4
+14	    url = LinkGenerator.booking_deeplink(test_reiseziel)
+15	    assert "booking.com/searchresults.html" in url
+16	    assert "ss=Berlin" in url
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:16:4
+15	    assert "booking.com/searchresults.html" in url
+16	    assert "ss=Berlin" in url
+17	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:26:4
+25	    )
+26	    assert "ss=Berlin" in url
+27	    assert "aid=123456" in url
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:27:4
+26	    assert "ss=Berlin" in url
+27	    assert "aid=123456" in url
+28	    assert "lang=de" in url
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:28:4
+27	    assert "aid=123456" in url
+28	    assert "lang=de" in url
+29	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:36:4
+35	    url = LinkGenerator.booking_deeplink(ziel)
+36	    assert "ss=S%C3%A3o+Paulo" in url
+37	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:43:4
+42	    url = LinkGenerator.wikipedia_link_generator(test_reiseziel)
+43	    assert url == "https://de.wikipedia.org/wiki/Berlin"
+44	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:50:4
+49	    url = LinkGenerator.wikipedia_link_generator(test_reiseziel, lang="en")
+50	    assert url == "https://en.wikipedia.org/wiki/Berlin"
+51	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_link_generator.py:61:4
+60	    url = LinkGenerator.wikipedia_link_generator(ziel)
+61	    assert "M%C3%BCnchen_Altstadt" in url
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_main.py:9:4
+8	    app = create_app()
+9	    assert isinstance(app, Flask)
+10	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_main.py:16:4
+15	    app = create_app()
+16	    assert app.secret_key is not None
+17	    assert isinstance(app.secret_key, bytes)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_main.py:17:4
+16	    assert app.secret_key is not None
+17	    assert isinstance(app.secret_key, bytes)
+18	    assert len(app.secret_key) == 24
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_main.py:18:4
+17	    assert isinstance(app.secret_key, bytes)
+18	    assert len(app.secret_key) == 24
+19	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_main.py:25:4
+24	    app = create_app()
+25	    assert "main" in app.blueprints  # "main" ist der Name im Blueprint
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:72:4
+71	    result = lade_reiseziele()
+72	    assert len(result) == 1
+73	    assert result[0].name == "Paris"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:73:4
+72	    assert len(result) == 1
+73	    assert result[0].name == "Paris"
+74	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:82:4
+81	    erwartet = "__ ist eine wunderschöne Stadt. Ich liebe __."
+82	    assert zensiere_reiseziel_name(text, "Paris") == erwartet
+83	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:105:4
+104	    result = verpixle_bild("http://example.com/test.jpg", dummy_level)
+105	    assert result.startswith(
+106	        "data:image/jpeg;base64,"), "Base64-Bild nicht korrekt generiert"
+107	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:121:4
+120	            "Desc"))
+121	    assert result == "http://broken-url.jpg"
+122	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:134:4
+133	    result = verpixle_bild("http://invalid-url.jpg", level)
+134	    assert result == "http://invalid-url.jpg"
+135	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:154:4
+153	    details = erzeuge_reiseziel_details(reiseziel)
+154	    assert details.name == "Rom"
+155	    assert details.beschreibung == "Hinweistext"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:155:4
+154	    assert details.name == "Rom"
+155	    assert details.beschreibung == "Hinweistext"
+156	    assert details.image_url == "http://image.jpg"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:156:4
+155	    assert details.beschreibung == "Hinweistext"
+156	    assert details.image_url == "http://image.jpg"
+157	    assert details.booking_url == "http://booking"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:157:4
+156	    assert details.image_url == "http://image.jpg"
+157	    assert details.booking_url == "http://booking"
+158	    assert details.wikipedia_url == "http://wiki"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:158:4
+157	    assert details.booking_url == "http://booking"
+158	    assert details.wikipedia_url == "http://wiki"
+159	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:190:4
+189	        dummy_kategorie, dummy_kontinent, dummy_level)
+190	    assert quizfrage is not None
+191	    assert quizfrage.richtige_antwort is not None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:191:4
+190	    assert quizfrage is not None
+191	    assert quizfrage.richtige_antwort is not None
+192	    assert isinstance(quizfrage.antwortoptionen, list)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:192:4
+191	    assert quizfrage.richtige_antwort is not None
+192	    assert isinstance(quizfrage.antwortoptionen, list)
+193	    assert len(quizfrage.antwortoptionen) == dummy_level.antwortanzahl
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:193:4
+192	    assert isinstance(quizfrage.antwortoptionen, list)
+193	    assert len(quizfrage.antwortoptionen) == dummy_level.antwortanzahl
+194	    assert quizfrage.richtige_antwort in quizfrage.antwortoptionen
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:194:4
+193	    assert len(quizfrage.antwortoptionen) == dummy_level.antwortanzahl
+194	    assert quizfrage.richtige_antwort in quizfrage.antwortoptionen
+195	    assert isinstance(quizfrage.hinweistext, str)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:195:4
+194	    assert quizfrage.richtige_antwort in quizfrage.antwortoptionen
+195	    assert isinstance(quizfrage.hinweistext, str)
+196	    assert quizfrage.bild_url.startswith("data:image/")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_quiz_engine.py:196:4
+195	    assert isinstance(quizfrage.hinweistext, str)
+196	    assert quizfrage.bild_url.startswith("data:image/")
+197	
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'test'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b105_hardcoded_password_string.html
+   Location: .\tests\test_routes.py:22:21
+21	    app = Flask(__name__, template_folder=template_path)
+22	    app.secret_key = 'test'
+23	    app.register_blueprint(main)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:35:4
+34	def test_is_allowed_link():
+35	    assert is_allowed_link("https://de.wikipedia.org/wiki/Berlin") is True
+36	    assert is_allowed_link("https://www.booking.com/hotel") is True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:36:4
+35	    assert is_allowed_link("https://de.wikipedia.org/wiki/Berlin") is True
+36	    assert is_allowed_link("https://www.booking.com/hotel") is True
+37	    assert is_allowed_link("https://malicious-site.com") is False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:37:4
+36	    assert is_allowed_link("https://www.booking.com/hotel") is True
+37	    assert is_allowed_link("https://malicious-site.com") is False
+38	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:44:4
+43	    response = client.get("/")
+44	    assert response.status_code == 200
+45	    assert b"Reisequiz" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:45:4
+44	    assert response.status_code == 200
+45	    assert b"Reisequiz" in response.data
+46	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:58:4
+57	    response = client.get("/settings")
+58	    assert response.status_code == 200
+59	    assert b"Stadt" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:59:4
+58	    assert response.status_code == 200
+59	    assert b"Stadt" in response.data
+60	    assert b"Europa" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:60:4
+59	    assert b"Stadt" in response.data
+60	    assert b"Europa" in response.data
+61	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:92:4
+91	    }, follow_redirects=True)
+92	    assert response.status_code == 200
+93	    assert b"Hinweistext" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:93:4
+92	    assert response.status_code == 200
+93	    assert b"Hinweistext" in response.data
+94	    assert b"img_url" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:94:4
+93	    assert b"Hinweistext" in response.data
+94	    assert b"img_url" in response.data
+95	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:116:4
+115	    response = client.post("/result", data={"selected_answer": "Rom"})
+116	    assert response.status_code == 200
+117	    assert b"Rom" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:117:4
+116	    assert response.status_code == 200
+117	    assert b"Rom" in response.data
+118	    assert b"Beschreibung" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:118:4
+117	    assert b"Rom" in response.data
+118	    assert b"Beschreibung" in response.data
+119	    assert b"booking.com" in response.data
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:119:4
+118	    assert b"Beschreibung" in response.data
+119	    assert b"booking.com" in response.data
+120	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:130:4
+129	    }, follow_redirects=True)
+130	    assert "Ungültige Einstellungen" in response.get_data(as_text=True)
+131	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:141:4
+140	        follow_redirects=True)
+141	    assert b"Keine aktive Quizrunde gefunden" in response.data
+142	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:163:4
+162	        follow_redirects=True)
+163	    assert b"Reiseziel nicht gefunden" in response.data
+164	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:181:4
+180	        follow_redirects=True)
+181	    assert b"Fehlende Reisedetails in der Session" in response.data
+182	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.6/plugins/b101_assert_used.html
+   Location: .\tests\test_routes.py:200:4
+199	    response = client.post("/result", data={"selected_answer": "Rom"})
+200	    assert b'href="#"' in response.data
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1229
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 62
+		Medium: 1
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 1
+		Medium: 1
+		High: 61
+Files skipped (0):

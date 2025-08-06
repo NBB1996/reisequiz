@@ -29,6 +29,6 @@ class Kategorie:
         Returns:
             Kategorie-Objekt oder None, wenn nicht gefunden.
         """
-        return next((kat for kat in Kategorie.get_all() if kat.name == name), None)
-
-
+        return next(
+            (kat for kat in Kategorie.get_all() if kat.name == name),
+            None)

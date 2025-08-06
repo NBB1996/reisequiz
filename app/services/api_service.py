@@ -4,6 +4,7 @@ from urllib.parse import quote, urlparse
 from typing import Optional, Mapping
 from app.models.reiseziel import Reiseziel
 
+
 class APIService:
     """
     Liefert Daten über Wikipedia APIs für Quiz-Hinweise, Bilder und Links.
@@ -16,10 +17,10 @@ class APIService:
 
     # Endpoint-Templates mit Platzhalter für Sprache und Titel
     SUMMARY_ENDPOINT: str = "https://{lang}.wikipedia.org/api/rest_v1/page/summary/{title}"
-    IMAGE_ENDPOINT:   str = "https://{lang}.wikipedia.org/api/rest_v1/page/summary/{title}"
+    IMAGE_ENDPOINT: str = "https://{lang}.wikipedia.org/api/rest_v1/page/summary/{title}"
     # Default-Sprachen für Text und Bild
     SUMMARY_DEFAULT_LANG: str = "de"
-    IMAGE_DEFAULT_LANG:   str = "en"
+    IMAGE_DEFAULT_LANG: str = "en"
     # URL für das Platzhalterbild
     PLACEHOLDER_IMAGE_URL: str = "/static/platzhalter.jpg"
 
@@ -39,8 +40,8 @@ class APIService:
         Holt einen Kurztext aus der Wikipedia als Beschreibung.
         Args:
             reiseziel: Zielort.
-            lang: Sprachcode (z.B. 'de', 'en'). 
-        Default: 
+            lang: Sprachcode (z.B. 'de', 'en').
+        Default:
             SUMMARY_DEFAULT_LANG.
         Returns:
             Extrakt aus der Wikipedia-Zusammenfassung oder Fallback-Text.
@@ -71,7 +72,7 @@ class APIService:
         Args:
             reiseziel: Zielort.
             lang: Sprachcode (z.B. 'de', 'en').
-        Default: 
+        Default:
             IMAGE_DEFAULT_LANG.
         Returns:
             URL eines Wikipedia-Bilds oder eines Platzhalterbilds.

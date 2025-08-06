@@ -1,5 +1,6 @@
 from app.models.reiseziel import Reiseziel
 
+
 class Quizfrage:
     """
     Repräsentiert eine einzelne Quizfrage bestehend aus Hinweistext, Bild, Antwortoptionen und Lösung.
@@ -23,4 +24,3 @@ class Quizfrage:
         self.antwortoptionen = antwortoptionen
         self.richtige_antwort = richtige_antwort
         self.benutzerantwort: Reiseziel | None = None
-

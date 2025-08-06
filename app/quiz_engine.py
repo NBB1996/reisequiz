@@ -15,12 +15,13 @@ from app.models.kontinent import Kontinent
 from app.models.level import Level
 from app.services.link_generator import LinkGenerator
 
+
 def lade_reiseziele(pfad="app/static/data/reiseziel.json"):
     """
     Lädt alle verfügbaren Reiseziele aus der in data hinterlegten reiseziel.json Datei.
 
-    Args: 
-        pfad zur reiseziel Datei 
+    Args:
+        pfad zur reiseziel Datei
 
     Rückgabe:
         Liste von Reiseziel-Objekten.
@@ -36,6 +37,7 @@ def lade_reiseziele(pfad="app/static/data/reiseziel.json"):
         ) for eintrag in daten
     ]
 
+
 def zensiere_reiseziel_name(text, reiseziel_name):
     """
     Zensiert den Namen des Reiseziels im Hinweistext durch "__", um Spoiler zu vermeiden.
@@ -50,6 +52,7 @@ def zensiere_reiseziel_name(text, reiseziel_name):
     """
     muster = re.compile(re.escape(reiseziel_name), re.IGNORECASE)
     return muster.sub("__", text)
+
 
 def verpixle_bild(bild_url, level):
     """
@@ -73,10 +76,13 @@ def verpixle_bild(bild_url, level):
         original_size = img.size
 
         # Sicherheits-Check: nicht stärker verpixeln als Bildgröße
-        pixel_size = max(1, min(verpixelung, original_size[0], original_size[1]))
+        pixel_size = max(
+            1, min(
+                verpixelung, original_size[0], original_size[1]))
 
         # Verpixeln durch Runter- und Hochskalierung
-        klein = img.resize((pixel_size, pixel_size), resample=Resampling.NEAREST)
+        klein = img.resize((pixel_size, pixel_size),
+                           resample=Resampling.NEAREST)
         verpixelt = klein.resize(original_size, Resampling.NEAREST)
 
         # Format erkennen und korrekt speichern (PNG vs JPEG)
@@ -92,7 +98,8 @@ def verpixle_bild(bild_url, level):
     except Exception as e:
         print(f"[Fehler beim Verpixeln] {e}")
         return bild_url  # Fallback: nicht verpixelt
-    
+
+
 def erzeuge_reiseziel_details(reiseziel):
     """
     Erzeugt Detailinformationen zu einem Reiseziel über API-Zugriffe.
@@ -116,6 +123,7 @@ def erzeuge_reiseziel_details(reiseziel):
         wikipedia_url=wikipedia_url
     )
 
+
 def generiere_quizfrage(kategorie, kontinent, level):
     """
     Erstellt eine neue Quizfrage anhand der gewählten Einstellungen.
@@ -129,24 +137,26 @@ def generiere_quizfrage(kategorie, kontinent, level):
         Quizfrage: Objekt mit Hinweistext, Bild und Antwortoptionen
     """
     # 1. Reiseziel-Auswahl basierend auf Nutzerpräferenzen
-    alle_zielorte = lade_reiseziele() 
-    gefiltert = [
-        rz for rz in alle_zielorte
-        if rz.kategorie.name == kategorie.name and rz.kontinent.name == kontinent.name
-    ]
+    alle_zielorte = lade_reiseziele()
+    gefiltert = [rz for rz in alle_zielorte if rz.kategorie.name ==
+                 kategorie.name and rz.kontinent.name == kontinent.name]
 
     # 2. Zufällige Antwortoptionen bestimmen
     if len(gefiltert) < level.antwortanzahl:
-        raise ValueError("Nicht genug Reisezieloptionen für die Auswahl vorhanden.")
+        raise ValueError(
+            "Nicht genug Reisezieloptionen für die Auswahl vorhanden.")
 
     antwortoptionen = random.sample(gefiltert, level.antwortanzahl)
     richtige_antwort = random.choice(antwortoptionen)
 
     # 3. Hinweise abrufen (Hinweistext & Bild)
     details = erzeuge_reiseziel_details(richtige_antwort)
-    hinweistext = zensiere_reiseziel_name(details.beschreibung, richtige_antwort.name)
-    # Wenn das Bild ein Platzhalter ist (lokaler statischer Pfad), dann nicht verpixeln
-    if details.image_url.startswith("/static/") or "platzhalter" in details.image_url:
+    hinweistext = zensiere_reiseziel_name(
+        details.beschreibung, richtige_antwort.name)
+    # Wenn das Bild ein Platzhalter ist (lokaler statischer Pfad), dann nicht
+    # verpixeln
+    if details.image_url.startswith(
+            "/static/") or "platzhalter" in details.image_url:
         bild_verpixelt = details.image_url
     else:
         bild_verpixelt = verpixle_bild(details.image_url, level)
@@ -158,4 +168,3 @@ def generiere_quizfrage(kategorie, kontinent, level):
         antwortoptionen=antwortoptionen,
         richtige_antwort=richtige_antwort
     ), details
-

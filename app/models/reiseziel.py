@@ -1,6 +1,7 @@
 from app.models.kontinent import Kontinent
 from app.models.kategorie import Kategorie
 
+
 class Reiseziel:
     """
     Repräsentiert ein Reiseziel (z.B. Stadt oder Region) im Quiz.

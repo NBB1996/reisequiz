@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, flash
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
-from app.quiz_engine import generiere_quizfrage,lade_reiseziele, erzeuge_reiseziel_details
+from app.quiz_engine import generiere_quizfrage, lade_reiseziele, erzeuge_reiseziel_details
 from app.models.quiz import Quiz
 from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
@@ -12,8 +12,11 @@ from urllib.parse import urlparse
 main = Blueprint('main', __name__)
 
 # DummyForm Klasse zur CSRF Aktivierung
+
+
 class DummyForm(FlaskForm):
     pass
+
 
 def is_allowed_link(url: str) -> bool:
     """
@@ -22,14 +25,17 @@ def is_allowed_link(url: str) -> bool:
     host = urlparse(url).hostname or ""
     return host.endswith("wikipedia.org") or host.endswith("booking.com")
 
+
 @main.route('/')
 def index():
     # Startseite mit Begrüßung und Quiz-Start-Button
     return render_template('index.html')
 
+
 @main.route('/settings', methods=['GET', 'POST'])
 def settings():
-    # Anzeige des Quiz-Einstellungsformulars (Festlegung von Level, Kategorie, Kontinent)
+    # Anzeige des Quiz-Einstellungsformulars (Festlegung von Level, Kategorie,
+    # Kontinent)
     kategorien = Kategorie.get_all()
     kontinente = Kontinent.get_all()
     level_stufen = Level.get_all()
@@ -37,14 +43,15 @@ def settings():
     # CSRF-Formular initialisieren
     form = DummyForm()
 
-    # Übergebae der Auswahlmöglichkeiten an das Template 
+    # Übergebae der Auswahlmöglichkeiten an das Template
     return render_template(
-        'settings.html', 
-        kategorien=kategorien, 
-        kontinente=kontinente, 
+        'settings.html',
+        kategorien=kategorien,
+        kontinente=kontinente,
         level_stufen=level_stufen,
         form=form
-        )
+    )
+
 
 @main.route("/quiz", methods=["POST"])
 def quiz():
@@ -72,10 +79,10 @@ def quiz():
 
     # 6. Session speichern
     session["quiz_config"] = {
-        "kategorie": kategorie_name,   
-        "kontinent": kontinent_name, 
+        "kategorie": kategorie_name,
+        "kontinent": kontinent_name,
         "level": level_name,
-        "richtige_antwort": frage.richtige_antwort.name, 
+        "richtige_antwort": frage.richtige_antwort.name,
         "details": {
             "beschreibung": details.beschreibung,
             "booking_link": details.booking_url,
@@ -85,7 +92,12 @@ def quiz():
     }
 
     # 7. Template anzeigen
-    return render_template("quiz.html", frage=frage, quiz_config=session["quiz_config"], form=DummyForm())
+    return render_template(
+        "quiz.html",
+        frage=frage,
+        quiz_config=session["quiz_config"],
+        form=DummyForm())
+
 
 @main.route("/result", methods=["POST"])
 def result():
@@ -101,13 +113,14 @@ def result():
     # 3. Daten rekonstruieren
     richtige_antwort_name = quiz_config["richtige_antwort"]
     alle_zielorte = lade_reiseziele()
-    richtige_antwort = next((rz for rz in alle_zielorte if rz.name == richtige_antwort_name), None)
+    richtige_antwort = next(
+        (rz for rz in alle_zielorte if rz.name == richtige_antwort_name), None)
 
     if not richtige_antwort:
         flash("Reiseziel nicht gefunden.")
         return redirect(url_for("main.settings"))
 
-    # 4. Vergleich mit Nutzereingabe 
+    # 4. Vergleich mit Nutzereingabe
     korrekt = (ausgewaehlt == richtige_antwort.name)
 
     # 5. Detailinformationen aus Session laden
@@ -115,8 +128,9 @@ def result():
     if not details_data:
         flash("Fehlende Reisedetails in der Session.")
         return redirect(url_for("main.settings"))
-    
-    # Sicherheitsprüfung, dass nur korrekte Booking, Wikipedia Links verwendet werden
+
+    # Sicherheitsprüfung, dass nur korrekte Booking, Wikipedia Links verwendet
+    # werden
     booking = details_data["booking_link"]
     wiki = details_data["wikipedia_link"]
 
@@ -131,7 +145,8 @@ def result():
         wikipedia_url=safe_wiki
     )
 
-    # 6. Ergebnis anzeigen mit Reisedetails und Links für weitere Details, Booking Buchungslink
+    # 6. Ergebnis anzeigen mit Reisedetails und Links für weitere Details,
+    # Booking Buchungslink
     return render_template(
         "result.html",
         korrekt=korrekt,
