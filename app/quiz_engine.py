@@ -160,6 +160,8 @@ def generiere_quizfrage(kategorie, kontinent, level):
         bild_verpixelt = details.image_url
     else:
         bild_verpixelt = verpixle_bild(details.image_url, level)
+        if not bild_verpixelt:
+            bild_verpixelt = details.image_url
 
     # 4. Quizfrage erzeugen
     return Quizfrage(

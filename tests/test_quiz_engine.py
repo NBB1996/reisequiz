@@ -13,6 +13,7 @@ from app.models.kategorie import Kategorie
 from app.models.kontinent import Kontinent
 from app.models.level import Level
 from app.models.reiseziel import Reiseziel
+from app.models.reiseziel import ReisezielDetails
 
 # Beispiel-Dummy-Level für Schwierigkeitsstufe „Mittel“
 
@@ -162,7 +163,7 @@ def test_erzeuge_reiseziel_details(
 
 @patch("app.quiz_engine.lade_reiseziele")
 @patch("app.quiz_engine.erzeuge_reiseziel_details")
-@patch("app.quiz_engine.verpixle_bild")
+@patch("app.quiz_engine.verpixle_bild", return_value="data:image/jpeg;base64,AAA")
 def test_generiere_quizfrage_valid(
     mock_verpixle_bild,
     mock_erzeuge_details,
@@ -209,3 +210,98 @@ def test_generiere_quizfrage_too_few_options(
         generiere_quizfrage(
             dummy_kategorie, dummy_kontinent, Level(
                 "Globetrotter", 6, 70, "Schwer"))
+
+# Testet den Fallback auf Originalbild-URL, wenn verpixle_bild None zurückgibt (U09)
+
+
+@patch("app.quiz_engine.lade_reiseziele")
+@patch("app.quiz_engine.erzeuge_reiseziel_details")
+@patch("app.quiz_engine.verpixle_bild", return_value=None)  # ← Verpixlung schlägt fehl
+def test_generiere_quizfrage_verpixelung_failover(
+    mock_verpixle_bild,
+    mock_erzeuge_details,
+    mock_lade_reiseziele,
+    dummy_kategorie,
+    dummy_kontinent,
+    dummy_level,
+    dummy_reiseziele
+):
+    """Testet Fallback auf Originalbild-URL, wenn verpixle_bild keine Base64-URL liefert."""
+
+    # Setze Dummy-Reiseziele
+    mock_lade_reiseziele.return_value = [
+        Reiseziel(z["name"], Kontinent(z["kontinent"]), Kategorie(z["kategorie"]), ) for z in dummy_reiseziele
+    ]
+
+    # Setze ReisezielDetails mit Bild-URL
+    mock_erzeuge_details.return_value = ReisezielDetails(
+        name="Rom",
+        beschreibung="Test-Hinweis",
+        image_url="http://original-url.de/bild.jpg",  # Wird als Fallback erwartet
+        booking_url="http://booking.com",
+        wikipedia_url="http://wiki.org"
+    )
+
+    # Erzeuge Quizfrage mit gemocktem Bild-Verpixelungsergebnis (None)
+    quizfrage, details = generiere_quizfrage(
+        dummy_kategorie, dummy_kontinent, dummy_level
+    )
+
+    # Prüfe, ob Fallback gegriffen hat
+    assert quizfrage.bild_url == "http://original-url.de/bild.jpg"
+
+# Testen Shortcut bei /static/ URL (U10)
+
+@patch("app.quiz_engine.lade_reiseziele")
+@patch("app.quiz_engine.erzeuge_reiseziel_details")
+@patch("app.quiz_engine.verpixle_bild")
+def test_generiere_quizfrage_static_placeholder_shortcut(
+    mock_verpixle_bild,
+    mock_erzeuge_details,
+    mock_lade_reiseziele,
+    dummy_kategorie,
+    dummy_kontinent,
+    dummy_level,
+):
+    mock_lade_reiseziele.return_value = [
+        make_reiseziel("Paris"), make_reiseziel("Rom"),
+        make_reiseziel("Madrid"), make_reiseziel("Berlin")
+    ]
+    mock_erzeuge_details.return_value = ReisezielDetails(
+        name="Rom",
+        beschreibung="Hinweis",
+        image_url="/static/bilder/rom.png",   # triggert startswith('/static/')
+        booking_url="http://booking",
+        wikipedia_url="http://wiki",
+    )
+    quizfrage, _ = generiere_quizfrage(dummy_kategorie, dummy_kontinent, dummy_level)
+    assert quizfrage.bild_url == "/static/bilder/rom.png"
+    mock_verpixle_bild.assert_not_called()
+
+# Testen Shortcut bei "platzhalter" im Bildpfad (U11)
+
+@patch("app.quiz_engine.lade_reiseziele")
+@patch("app.quiz_engine.erzeuge_reiseziel_details")
+@patch("app.quiz_engine.verpixle_bild")
+def test_generiere_quizfrage_text_placeholder_shortcut(
+    mock_verpixle_bild,
+    mock_erzeuge_details,
+    mock_lade_reiseziele,
+    dummy_kategorie,
+    dummy_kontinent,
+    dummy_level,
+):
+    mock_lade_reiseziele.return_value = [
+        make_reiseziel("Paris"), make_reiseziel("Rom"),
+        make_reiseziel("Madrid"), make_reiseziel("Berlin")
+    ]
+    mock_erzeuge_details.return_value = ReisezielDetails(
+        name="Paris",
+        beschreibung="Hinweis",
+        image_url="https://cdn.example.com/platzhalter_123.jpg",  # enthält 'platzhalter'
+        booking_url="http://booking",
+        wikipedia_url="http://wiki",
+    )
+    quizfrage, _ = generiere_quizfrage(dummy_kategorie, dummy_kontinent, dummy_level)
+    assert quizfrage.bild_url == "https://cdn.example.com/platzhalter_123.jpg"
+    mock_verpixle_bild.assert_not_called()

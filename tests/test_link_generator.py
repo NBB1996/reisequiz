@@ -7,7 +7,7 @@ from app.models.reiseziel import Reiseziel, Kontinent, Kategorie
 def test_reiseziel():
     return Reiseziel("Berlin", Kontinent("Europa"), Kategorie("Stadt"))
 
-# Booking-Link enthält korrekten Reisezielnamen (U16)
+# Booking-Link enthält korrekten Reisezielnamen (U19)
 
 
 def test_booking_deeplink_basic(test_reiseziel):
@@ -15,7 +15,7 @@ def test_booking_deeplink_basic(test_reiseziel):
     assert "booking.com/searchresults.html" in url
     assert "ss=Berlin" in url
 
-# Booking-Link mit zusätzlichen Parametern (U17)
+# Booking-Link mit zusätzlichen Parametern (U20)
 
 
 def test_booking_deeplink_with_extra_params(test_reiseziel):
@@ -27,7 +27,7 @@ def test_booking_deeplink_with_extra_params(test_reiseziel):
     assert "aid=123456" in url
     assert "lang=de" in url
 
-# Booking-Link encodiert Sonderzeichen korrekt (U18)
+# Booking-Link encodiert Sonderzeichen korrekt (U22)
 
 
 def test_booking_deeplink_special_characters():
@@ -35,21 +35,21 @@ def test_booking_deeplink_special_characters():
     url = LinkGenerator.booking_deeplink(ziel)
     assert "ss=S%C3%A3o+Paulo" in url
 
-# Wikipedia-Link mit Standardsprache (U19)
+# Wikipedia-Link mit Standardsprache (U20)
 
 
 def test_wikipedia_link_default_lang(test_reiseziel):
     url = LinkGenerator.wikipedia_link_generator(test_reiseziel)
     assert url == "https://de.wikipedia.org/wiki/Berlin"
 
-# Wikipedia-Link mit benutzerdefinierter Sprache (U20)
+# Wikipedia-Link mit benutzerdefinierter Sprache (U23)
 
 
 def test_wikipedia_link_custom_lang(test_reiseziel):
     url = LinkGenerator.wikipedia_link_generator(test_reiseziel, lang="en")
     assert url == "https://en.wikipedia.org/wiki/Berlin"
 
-# Wikipedia-Link mit Leerzeichen und Umlauten (U21)
+# Wikipedia-Link mit Leerzeichen und Umlauten (U24)
 
 
 def test_wikipedia_link_encoding():

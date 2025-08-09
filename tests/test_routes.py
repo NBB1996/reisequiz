@@ -28,7 +28,7 @@ def app():
 def client(app):
     return app.test_client()
 
-# Funktionstest für Sicherheit (U09)
+# Funktionstest für Sicherheit (U12)
 
 
 def test_is_allowed_link():

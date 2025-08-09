@@ -76,7 +76,7 @@ http://localhost:5000
 reisequiz/
 ├── app/
 │   ├── models/              # Datenmodelle: Kategorie, Level, Reiseziel etc.
-│   ├── services/            # API-Zugriff und Link-Generierung
+│   ├── services/            # API-Zugriff, Link-Generierung und Reiseziel Datei Generator
 │   ├── static/              # CSS, Bilder, JSON-Daten
 │   │   └── data/
 │   │       └── reiseziel.json   # Beispieldaten für das Quiz
@@ -90,6 +90,12 @@ reisequiz/
 ├── README.md                # Diese Anleitung
 └── run.py                   # Alternativer Startpunkt (direkt via Python)
 ```
+
+## Hinweis Reiseziel Generator
+Im Bereich **Services** findest du ein Skript *reiseziel_generator.py*.
+Diese Datei dient zur Erstellung der reiseziel.json Datei,die du unter static/data findest.
+Bitte führe diese Datei **nur** aus, wenn du neue Reiseziele generieren möchstes.
+Im aktuellen Repository ist die Datei reiseziel.json bereits mit über 1000 Reisezielen hinterlegt. 
 
 ## Häufige Probleme
 | Problem                                | Lösung                                                                   |
